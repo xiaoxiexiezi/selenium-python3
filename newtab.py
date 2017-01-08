@@ -71,8 +71,12 @@ print(jg6)
 driver.close()
 
 driver.switch_to_window(alltab3[0])
+driver.find_element_by_id("phoneverification").clear()
 driver.find_element_by_id("phoneverification").send_keys(jg6)
-
-
+driver.find_element_by_id("password").clear()
+driver.find_element_by_id("password").send_keys("test123")
+driver.find_element_by_id("password2").clear()
+driver.find_element_by_id("password2").send_keys("test123")
+driver.find_element_by_xpath("xpath=(//input[@id='submit'])[2]").click()
 
 #driver.quit()
