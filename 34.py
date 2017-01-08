@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
-from _12_ import *
+from _ron_jineandphone_ import *
 driver = webdriver.Chrome('/Users/tcw/chromedriver')
 driver.get("https://testv2.pandai.cn")
 time.sleep(2)
