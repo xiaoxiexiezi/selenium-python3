@@ -1,5 +1,6 @@
 #手机号后八位随机
 import random
+import string
 from _rondom_phone_ import *
 
 
@@ -11,7 +12,9 @@ print(qu)
 #随机前三位加后八位随机组合
 f = random.choice((130,131,132,133,134,135,136,138,139,150,151,173,180,181,182,183,185,186,187,189,))
 u = str(f) + str(random_str(8))
-print(u)
+print('本次随机生产的手机号为：' + u)
 
-tz1 = '曲靖宣威土猪养殖项目'
-print(tz1)
+phonefile = open("/Users/tcw/qqq.txt",'a')
+
+phonefile.write('本次随机手机号为：' + u + '\n' )
+phonefile.close()

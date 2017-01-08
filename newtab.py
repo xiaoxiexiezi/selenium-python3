@@ -77,6 +77,6 @@ driver.find_element_by_id("password").clear()
 driver.find_element_by_id("password").send_keys("test123")
 driver.find_element_by_id("password2").clear()
 driver.find_element_by_id("password2").send_keys("test123")
-driver.find_element_by_xpath("xpath=(//input[@id='submit'])[2]").click()
+driver.find_element_by_xpath("//div[2]/form/p[5]/input").click()
 
 #driver.quit()

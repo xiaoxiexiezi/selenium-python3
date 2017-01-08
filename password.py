@@ -27,9 +27,6 @@ print(s2)
 
 sss = open("/Users/tcw/qqq.txt",'a')
 
-aff = 1
 
-for i in range(1,9):
-    print(i)
 sss.write('本次随机密码为' + s2 + '\n' )
 sss.close()
