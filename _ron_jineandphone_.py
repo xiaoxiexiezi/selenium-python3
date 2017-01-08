@@ -4,7 +4,7 @@ import string
 from _rondom_phone_ import *
 
 
-qi = random.randint(1,99) #随机一个数
+qi = random.randint(1,9) #随机一个数
 #print(qi)
 qu = qi * 100 #乘以100
 print(qu)
@@ -18,3 +18,5 @@ print('本次随机的手机号为：' + u)
 
 #phonefile.write('本次随机手机号为：' + u + '\n')
 #phonefile.close()
+
+tz1 = '曲靖宣威土猪养殖项目'
