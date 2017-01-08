@@ -1,6 +1,6 @@
 import linecache
 import random
-z = '/Users/tcw/qqq.txt'
+z = '/Users/tcw/already_registered.txt'
 
 count = len(open(z,'rU').readlines()) #获取文件总行数
 print('总行数:' + str(count))
@@ -15,6 +15,6 @@ count2 = count1[9:20] #截取第9-20位
 
 print(count2)
 
-count3 = '随机到第' + '|' + str(qqq) + '|' + '的内容为' + '[[' + str(count1).strip() + ']]'
+count3 = '随机到第' + '|' + str(qqq) + '|' + '行的内容为' + '[[' + str(count1).strip() + ']]'
 
 print(count3)

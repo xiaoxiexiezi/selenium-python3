@@ -1,7 +1,7 @@
 #coding=utf-8
 from selenium import webdriver
 import time
-from _random_amount_ import qu
+from _random_phone_ import u
 import datetime
 
 driver = webdriver.Chrome("/Users/tcw/chromedriver")
@@ -29,7 +29,7 @@ print('第一个标签的句柄是:' + alltab[0])
 
 
 driver.find_element_by_id("username").clear()
-driver.find_element_by_id("username").send_keys(u)
+driver.find_element_by_id("username").send_keys(u) #从_random_phone_ import u读取手机号
 
 driver.find_element_by_id("verification").clear()
 driver.find_element_by_id("verification").send_keys(dr55)
@@ -80,10 +80,12 @@ driver.find_element_by_id("password2").send_keys("test123")
 driver.find_element_by_xpath("//div[2]/form/p[5]/input").click()
 
 now = datetime.datetime.now()
-phonefile = open("/Users/tcw/qqq.txt", 'a')
-
-phonefile.write('本次随机手机号为：' + u + '|' + str(now) + '\n' )
+phonefile = open("/Users/tcw/already_registered.txt", 'a')
+phonefile.write('本次注册使用手机号为：' + u + '|' + str(now) + '\n' )
+phonefile.close()
+phonefile1 = "/Users/tcw/already_registered.txt"
+count2 = len(open(phonefile1,'rU').readlines()) #获取文件总行数
+print('总行数:' + str(count2))
 phonefile.close()
 
-
-#driver.quit()
+driver.quit()

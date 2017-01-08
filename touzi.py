@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import re
-#from _ron_jineandphone_ import qu
+from _random_amount_ import qu
 from _getuser_ import count2
 driver = webdriver.Chrome('/Users/tcw/chromedriver')
 driver.get("https://testv2.pandai.cn")
@@ -44,9 +44,9 @@ print('本次充值' + str(qu) + '元,现账户余额为' + ":" + data4)
 at = re.sub('[^\d\+]','',data4)
 at1=50000
 try:
-	print('result:{}元'.format(at))
+    print('result:{}元'.format(at))
 except:
-	print('result:error')
+    print('result:error')
 #s=int(data4)-int(data2)
 #print(s)
 
@@ -69,7 +69,7 @@ print('第一个标签的句柄是:' + alltab[0])
 tz2 = driver.find_element_by_css_selector("div.rec-2").text
 time.sleep(3)
 if tz1 == tz2:
-	print('页面存在,测试通过')
+    print('页面存在,测试通过')
 
 driver.find_element_by_link_text(u"还款列表").click() # 还款列表
 driver.find_element_by_link_text(u"投资记录").click() # 投资记录
