@@ -1,7 +1,7 @@
 #coding=utf-8
 from selenium import webdriver
 import time
-from _ron_jineandphone_ import *
+from _random_amount_ import qu
 import datetime
 
 driver = webdriver.Chrome("/Users/tcw/chromedriver")

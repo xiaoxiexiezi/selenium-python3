@@ -1,7 +1,7 @@
 #手机号后八位随机
 import random
 import string
-from _rondom_phone_ import *
+from _random_phone_ import random_str
 
 
 qi = random.randint(1,9) #随机一个数

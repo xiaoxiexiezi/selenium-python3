@@ -8,8 +8,8 @@ def random_str(randomlength=8):
         str+=chars[random.randint(0, length)]
     return str
 
-def random_phone():
-    phonefile = open("/Users/tcw/qqq.txt", 'a')
-
-    phonefile.write('本次随机手机号为：' + u + '\n')
-    phonefile.close()
+# def random_phone():
+#     phonefile = open("/Users/tcw/qqq.txt", 'a')
+#
+#     phonefile.write('本次随机手机号为：' + u + '\n')
+#     phonefile.close()

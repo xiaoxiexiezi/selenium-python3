@@ -2,7 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import re
-from _ron_jineandphone_ import *
+#from _ron_jineandphone_ import qu
+from _getuser_ import count2
 driver = webdriver.Chrome('/Users/tcw/chromedriver')
 driver.get("https://testv2.pandai.cn")
 time.sleep(2)
@@ -11,14 +12,15 @@ data=driver.find_element_by_xpath("//div[6]/div[2]/div/p[2]").text
 print('网站标题信息:'+ driver.title)
 print('网站底部信息:'+ data) #打印信息
 time.sleep(2)
-driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + 't')
-source = open("/Users/tcw/python/user.txt",'r')#打开用户名文件
-ur = source.readline()#讲user.txt赋值给ur
-source.close()#关闭文件
+ # driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + 't')
+# source = open("/Users/tcw/qqq.txt",'r')#打开用户名文件
+# ur = source.readline()#讲user.txt赋值给ur
+#source.close()#关闭文件
 driver.find_element_by_link_text(u"首页").click()
 driver.find_element_by_link_text(u"登录").click()
 driver.find_element_by_id("login").clear()
-driver.find_element_by_id("login").send_keys(ur)
+driver.find_element_by_id("login").send_keys(count2)
+time.sleep(222)
 driver.find_element_by_id("password").clear()
 driver.find_element_by_id("password").send_keys("test123")
 driver.find_element_by_name("commit").click()

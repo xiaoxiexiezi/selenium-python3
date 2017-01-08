@@ -13,6 +13,8 @@ count1 = linecache.getline(z,qqq) #打开文件，并获取变量qqq行 赋值�
 
 count2 = count1[9:20] #截取第9-20位
 
+print(count2)
+
 count3 = '随机到第' + '|' + str(qqq) + '|' + '的内容为' + '[[' + str(count1).strip() + ']]'
 
 print(count3)
