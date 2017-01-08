@@ -1,8 +1,8 @@
 #coding=utf-8
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import time
 from _12_ import *
+import datetime
 
 driver = webdriver.Chrome("/Users/tcw/chromedriver")
 driver.get("https://testv2.pandai.cn/registers/new")
@@ -78,5 +78,12 @@ driver.find_element_by_id("password").send_keys("test123")
 driver.find_element_by_id("password2").clear()
 driver.find_element_by_id("password2").send_keys("test123")
 driver.find_element_by_xpath("//div[2]/form/p[5]/input").click()
+
+now = datetime.datetime.now()
+phonefile = open("/Users/tcw/qqq.txt", 'a')
+
+phonefile.write('本次随机手机号为：' + u + '|' + str(now) + '\n' )
+phonefile.close()
+
 
 #driver.quit()
