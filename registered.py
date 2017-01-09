@@ -80,7 +80,7 @@ driver.find_element_by_id("password2").send_keys("test123")
 driver.find_element_by_xpath("//div[2]/form/p[5]/input").click()
 
 now = datetime.datetime.now()
-phonefile = open("/Users/tcw/already_registered.txt", 'a')
+phonefile = open("/Users/tcw/already_registered.txt", 'a',encoding='utf-8')
 phonefile.write('本次注册使用手机号为：' + u + '|' + str(now) + '\n' )
 phonefile.close()
 phonefile1 = "/Users/tcw/already_registered.txt"
