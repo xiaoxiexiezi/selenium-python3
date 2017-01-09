@@ -7,7 +7,7 @@ print('总行数:' + str(count))
 
 qqq = random.randint(1,count) #随机1-count之间的数
 
-print('随机到第' + '|' + str(qqq) + '|' + '行')
+print('随机到第' + '|' + str(qqq) + '|' + '行') #
 
 count1 = linecache.getline(z,qqq) #打开文件，并获取变量qqq行 赋值给count1
 
