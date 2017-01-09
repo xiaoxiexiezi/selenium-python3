@@ -24,8 +24,8 @@ driver.switch_to_window(alltab[1])
 driver.close()
 driver.switch_to_window(alltab[0])
 alltab = driver.window_handles
-print('打开了' + str(len(alltab)) +'个标签')
-print('第一个标签的句柄是:' + alltab[0])
+# print('打开了' + str(len(alltab)) +'个标签')
+# print('第一个标签的句柄是:' + alltab[0])
 
 
 driver.find_element_by_id("username").clear()
@@ -47,6 +47,7 @@ print('第二个标签的句柄是:' + alltab3[1])
 driver.switch_to_window(alltab3[1])
 
 time.sleep(2)
+
 driver.find_element_by_id("login").clear()
 driver.find_element_by_id("login").send_keys("develop_admin")
 
@@ -57,7 +58,7 @@ driver.find_element_by_xpath("//button[@type='submit']").click()
 time.sleep(1)
 driver.get('https://testv2.pandai.cn/admin/portal/query_captcha')
 driver.switch_to_window(alltab3[1])
-print(alltab3[1])
+#print(alltab3[1])
 time.sleep(1)
 
 driver.find_element_by_name("mobile").send_keys(u)
