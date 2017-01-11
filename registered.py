@@ -29,7 +29,7 @@ alltab = driver.window_handles
 
 
 driver.find_element_by_id("username").clear()
-driver.find_element_by_id("username").send_keys(u) #从_random_phone_ import u读取手机号
+driver.find_element_by_id("username").send_keys(count2) #从_random_phone_ import u读取随机生成的手机号去注册
 
 driver.find_element_by_id("verification").clear()
 driver.find_element_by_id("verification").send_keys(dr55)
