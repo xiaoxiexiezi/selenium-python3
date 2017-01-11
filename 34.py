@@ -22,4 +22,5 @@ if tz1 == tz2:
 driver.find_element_by_xpath("//a[2]").click() #还款列表
 driver.find_element_by_xpath("//a[3]").click() #投资记录
 time.sleep(5)
+print(tz2)
 driver.quit()
