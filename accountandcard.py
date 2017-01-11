@@ -40,10 +40,16 @@ class Untitled(unittest.TestCase):
         print('--------测试通过---------')
         print('该用户身份' + assert2)
         print('--------测试通过---------')
-        driver.quit()
+    #    driver.quit()
+
     except:
         print("测试失败")
 
+        driver.find_element_by_css_selector("b").click()
+
     print('本次登录使用的手机号为|' + str(count2) + '|')
+
+    driver.find_element_by_css_selector("b").click()
+
 if __name__ == "__main__":
     unittest.main()

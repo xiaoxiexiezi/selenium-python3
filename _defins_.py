@@ -2,6 +2,7 @@
 import re
 
 import urllib.request
+import random
 
 
 def getdata():
@@ -14,3 +15,26 @@ def getdata():
         print(h1user)
 
 getdata()
+
+def randomj():
+    qi = random.randint(1,9) #随机一个数
+    #print(qi)
+    qu = qi * 100 #乘以100
+    print(qu)
+randomj()
+
+from random import Random
+def random_str(randomlength=8):
+    str = ''
+    chars = '0123456789'
+    length = len(chars) - 1
+    random = Random()
+    for i in range(randomlength):
+        str += chars[random.randint(0, length)]
+        # print(str)
+    return str;
+    print(str)
+
+
+
+random_str(8)
