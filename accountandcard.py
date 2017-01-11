@@ -14,8 +14,8 @@ class Untitled(unittest.TestCase):
     time.sleep(2)
 
     phonefile1 = "/Users/tcw/already_registered.txt"
-    count2 = len(open(phonefile1,'rU',encoding='utf-8').readlines()) #获取文件总行数
-    print('总行数:' + str(count2))
+    count3 = len(open(phonefile1,'rU',encoding='utf-8').readlines()) #获取文件总行数
+    print('总行数:' + str(count3))
     #phonefile1.close()
 
 
@@ -29,18 +29,21 @@ class Untitled(unittest.TestCase):
 
     try:
         assert1 = driver.find_element_by_xpath("//a[contains(@href, '/verify_guides/new?step=one')]").text
-        print('测试通过')
+        print('--------测试通过---------')
         print('该用户邮箱'+ assert1 )
+        print('--------测试通过---------')
       #  driver.quit()
     except:
         print("测试失败")
     try:
         assert2 = driver.find_element_by_xpath('//p[3]/a').text
+        print('--------测试通过---------')
         print('该用户身份' + assert2)
+        print('--------测试通过---------')
         driver.quit()
     except:
         print("测试失败")
 
-    print('本次登录使用的手机号为' + str(count2))
+    print('本次登录使用的手机号为|' + str(count2) + '|')
 if __name__ == "__main__":
     unittest.main()
