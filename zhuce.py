@@ -1,21 +1,7 @@
-#coding=utf-8
-from selenium import webdriver
 
-import time
+if __name__ == "__main__":
+    print(123)
 
-driver = webdriver.Chrome("/Users/tcw/chromedriver")
-driver.get("https://testv2.pandai.cn/registers/new")
-print('网站标题信息:'+ driver.title)
+if __name__ == "456":
+    print(456)
 
-
-
-
-
-
-
-
-
-
-
-
-driver.quit()
