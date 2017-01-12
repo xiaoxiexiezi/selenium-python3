@@ -12,7 +12,8 @@ class Untitled(unittest.TestCase):
     driver.find_element_by_id("login").clear()
     driver.find_element_by_id("login").send_keys(count2)
     time.sleep(1)
-
+    a = count2
+    print(a)
     phonefile1 = "/Users/tcw/already_registered.txt"
     count3 = len(open(phonefile1,'rU',encoding='utf-8').readlines()) #获取文件总行数
     print('总行数:' + str(count3))
@@ -66,9 +67,52 @@ class Untitled(unittest.TestCase):
         driver.close()
         driver.switch_to_window(alltab[0])
         alltab = driver.window_handles
+        # 获取图形验证码
 
-        driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").clear()
+
+
+        # driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").clear()
         driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").send_keys(dr55)
+        time.sleep(5)
+        driver.find_element_by_css_selector('button.confirm').click()
+        time.sleep(0.5)
+        driver.find_element_by_css_selector('button.confirm').click()
+
+
+
+        #获取短信验证码
+        js2 = "window.open('https://testv2.pandai.cn/admin/portal/query_captcha')"
+        driver.execute_script(js2)
+        time.sleep(2)
+        alltab3 = driver.window_handles
+        print('打开了' + str(len(alltab)) + '个标签')
+        print('第一个标签的句柄是:' + alltab3[0])
+        print('第二个标签的句柄是:' + alltab3[1])
+        driver.switch_to_window(alltab3[1])
+        time.sleep(1)
+        driver.find_element_by_id("login").clear()
+        driver.find_element_by_id("login").send_keys("develop_admin")
+        driver.find_element_by_id("password").clear()
+        driver.find_element_by_id("password").send_keys("test_123")
+        driver.find_element_by_xpath("//button[@type='submit']").click()
+        time.sleep(1)
+        driver.get('https://testv2.pandai.cn/admin/portal/query_captcha')
+        driver.switch_to_window(alltab3[1])
+        # print(alltab3[1])
+        time.sleep(1)
+        driver.find_element_by_name("mobile").send_keys(u)
+        driver.find_element_by_xpath(u"//input[@value='查询']").click()
+        jg = driver.find_element_by_css_selector("p.form-controls").text
+        print(jg)
+        jg6 = jg[-6:]
+        print(jg6)
+        # 获取短信验证码
+
+        driver.find_element_by_id('idcode').send_keys(jg6)
+        driver.find_element_by_id('submission').click()
+
+
+
 
     time.sleep(5)
 
@@ -106,7 +150,7 @@ class Untitled(unittest.TestCase):
     except:
         print('有错误了')
 
-    driver.quit()
+   # driver.quit()
 
 if __name__ == "__main__":
     unittest.main()

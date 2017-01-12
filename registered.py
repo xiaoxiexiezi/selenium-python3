@@ -83,7 +83,7 @@ driver.find_element_by_xpath("//div[2]/form/p[5]/input").click()
 
 now = datetime.datetime.now()
 phonefile = open("/Users/tcw/already_registered.txt", 'a',encoding='utf-8')
-phonefile.write('本次注册使用手机号为：' + u + '|' + str(now) + '\n' )
+phonefile.write('本次注册使用手机号为：' + jg6 + '|' + str(now) + '\n' )
 phonefile.close()
 phonefile1 = "/Users/tcw/already_registered.txt"
 count2 = len(open(phonefile1,'rU',encoding='utf-8').readlines()) #获取文件总行数
