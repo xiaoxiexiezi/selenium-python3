@@ -20,7 +20,7 @@ class Untitled(unittest.TestCase):
 
 
     driver.find_element_by_id("password").clear()
-    driver.find_element_by_id("password").send_keys("test123")
+    driver.find_element_by_id("password").send_keys("test123")  #密码
     driver.find_element_by_name("commit").click()
     data1=driver.find_element_by_xpath("//div[3]/div[2]/div/div/ol/li/span").text
     data2=driver.find_element_by_xpath("//li/b").text
