@@ -49,7 +49,6 @@ class Untitled(unittest.TestCase):
 
     print('本次登录使用的手机号为|' + str(count2) + '|')
 
-    driver.find_element_by_css_selector("b").click()
 
 if __name__ == "__main__":
     unittest.main()
