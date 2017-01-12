@@ -47,6 +47,11 @@ class Untitled(unittest.TestCase):
 
         driver.find_element_by_css_selector("b").click()
 
+    try: #检查手机号
+        assert3 = driver.find_element_by_xpath('//p[3]/a[2]').text
+        print('手机号'+assert3)
+    except:
+        print('123')
     print('本次登录使用的手机号为|' + str(count2) + '|')
 
 
