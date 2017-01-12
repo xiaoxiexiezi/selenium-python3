@@ -13,8 +13,9 @@ def getdata():
     if (aaa):
         h1user = aaa.group("color")
         print(h1user)
-
-getdata()
+    print(h1user)
+    return h1user
+# getdata()
 
 def randomj():
     qi = random.randint(1,9) #随机一个数
@@ -38,3 +39,20 @@ def random_str(randomlength=8):
 
 
 random_str(8)
+
+
+# #获取图形验证码
+# def tuxingyanzhengma():
+#
+# # js="window.open('https://testv2.pandai.cn/home/get_captcha_text')"
+# # driver.execute_script(js)
+# # time.sleep(2)
+# #
+# #
+# # alltab = driver.window_handles
+# # print('打开了' + str(len(alltab)) +'个标签')
+# # print('第一个标签的句柄是:' + alltab[0])
+# # print('第二个标签的句柄是:' + alltab[1])
+# # a=driver.switch_to_window(alltab[1])
+# # dr55 = driver.find_element_by_xpath("//pre").text
+# # print('本次验证码是:' + dr55)

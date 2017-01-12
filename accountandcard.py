@@ -37,7 +37,41 @@ class Untitled(unittest.TestCase):
         print("测试失败")
         driver.find_element_by_xpath('//a[3]/b').click()
 
-    if
+    if assert2 == '未认证':
+        driver.find_element_by_xpath('//a[3]/b').click()
+        from _randomchinese_ import andstr
+        time.sleep(2)
+        driver.find_element_by_css_selector("p.afac-popup-cen2>span.two-step").click()
+        time.sleep(2)
+        driver.find_element_by_id("realname").send_keys(andstr) #填写姓名
+        from _defins_ import getdata
+        driver.find_element_by_id("idnumber").clear()
+        driver.find_element_by_id("idnumber").send_keys(getdata()) #填写身份证号
+        driver.find_element_by_id("captcha-button").click()
+
+        #获取图形验证码
+        js = "window.open('https://testv2.pandai.cn/home/get_captcha_text')"
+        driver.execute_script(js)
+        time.sleep(2)
+
+        alltab = driver.window_handles
+        print('打开了' + str(len(alltab)) + '个标签')
+        print('第一个标签的句柄是:' + alltab[0])
+        print('第二个标签的句柄是:' + alltab[1])
+        a = driver.switch_to_window(alltab[1])
+        dr55 = driver.find_element_by_xpath("//pre").text
+        print('本次验证码是:' + dr55)
+        # 获取图形验证码
+        driver.switch_to_window(alltab[1])
+        driver.close()
+        driver.switch_to_window(alltab[0])
+        alltab = driver.window_handles
+
+        driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").clear()
+        driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").send_keys(dr55)
+
+    time.sleep(5)
+
     print('*************************')
 
     try: #检查手机号

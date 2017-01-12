@@ -24,7 +24,7 @@ print('本次验证码是:' + dr55)
 driver.switch_to_window(alltab[1])
 driver.close()
 driver.switch_to_window(alltab[0])
-alltab = driver.window_handles
+# alltab = driver.window_handles
 # print('打开了' + str(len(alltab)) +'个标签')
 # print('第一个标签的句柄是:' + alltab[0])
 
