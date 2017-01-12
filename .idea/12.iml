@@ -5,6 +5,7 @@
     <orderEntry type="jdk" jdkName="Python 3.5.2 (~/.pyenv/versions/3.5.2/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="selenium-python3" />
+    <orderEntry type="module" module-name="selenium_python3" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />
