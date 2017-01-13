@@ -2,8 +2,12 @@
 from selenium import webdriver
 import time
 from _getuser_ import count2
-import datetime
+import re
 import unittest
+from selenium.webdriver.support.ui import WebDriverWait
+# import selenium.webdriver.JavascriptExecutor
+from selenium.webdriver.support import expected_conditions as EC
+
 class Untitled(unittest.TestCase):
     driver = webdriver.Chrome("/Users/tcw/chromedriver")
     driver.get("https://testv2.pandai.cn/sessions/new#")
@@ -48,6 +52,8 @@ class Untitled(unittest.TestCase):
         from _defins_ import getdata
         driver.find_element_by_id("idnumber").clear()
         driver.find_element_by_id("idnumber").send_keys(getdata()) #填写身份证号
+        idmobile = driver.find_element_by_id('idmobile').text
+
         driver.find_element_by_id("captcha-button").click()
 
         #获取图形验证码
@@ -62,34 +68,35 @@ class Untitled(unittest.TestCase):
         print('第二个标签的句柄是:' + alltab[1])
         a = driver.switch_to_window(alltab[1])
         dr55 = driver.find_element_by_xpath("//pre").text
-        print('本次验证码是:' + dr55)
+        print('本次图形验证码是:' + dr55)
         # 获取图形验证码
         driver.switch_to_window(alltab[1])
-        driver.close()
+        #driver.close()
         driver.switch_to_window(alltab[0])
         alltab = driver.window_handles
         # 获取图形验证码
+        print('********')
+        a = driver.find_element_by_xpath('//div[8]/h2').text
+        totalCount = re.sub("\D", "", a)
+        print(totalCount)
 
         try:
-            a = driver.find_element_by_xpath('//div[8]/h2')
+            a1 = driver.find_element_by_xpath('//div[8]/h2').text
+            print(a1)
+            if a1 == '获取验证码成功':
+                driver.find_element_by_xpath('//div[7]/button[2]').click()
+            elif '秒之后重新尝试' in a:
+                driver.find_element_by_xpath('//div[7]/button[2]').click()
 
+            else:
+                driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").send_keys(dr55)
+                time.sleep(5)
+                driver.find_element_by_css_selector('button.confirm').click()
+                driver.find_element_by_xpath('//div[7]/button[2]').click()
             print(123)
         except:
-            print()
-
-        driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").send_keys(dr55)
-        time.sleep(5)
-        driver.find_element_by_css_selector('button.confirm').click()
-
-
-        # driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").clear()
-        driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").send_keys(dr55)
-        time.sleep(5)
-        driver.find_element_by_css_selector('button.confirm').click()
-        # time.sleep(0.5)
-        # driver.find_element_by_css_selector('button.confirm').click()
-
-
+            print(444)
+            driver.quit()
 
         #获取短信验证码
         js2 = "window.open('https://testv2.pandai.cn/admin/portal/query_captcha')"
@@ -111,16 +118,38 @@ class Untitled(unittest.TestCase):
         driver.switch_to_window(alltab3[1])
         # print(alltab3[1])
         time.sleep(1)
-        driver.find_element_by_name("mobile").send_keys(u)
+        driver.find_element_by_name("mobile").send_keys(count2)
+        time.sleep(5)
         driver.find_element_by_xpath(u"//input[@value='查询']").click()
+        time.sleep(1)
         jg = driver.find_element_by_css_selector("p.form-controls").text
         print(jg)
         jg6 = jg[-6:]
         print(jg6)
         # 获取短信验证码
+        alltab5 = driver.window_handles
+        driver.switch_to_window(alltab5[1])
+      #  driver.close()
+        driver.switch_to_window(alltab5[0])
+        alltab5 = driver.window_handles
 
-        driver.find_element_by_id('idcode').send_keys(jg6)
-        driver.find_element_by_id('submission').click()
+        # driver.find_element_by_id('idcode').send_keys(jg6)
+        # driver.implicitly_wait(10)
+        # driver.execute_script(arguments[0].click(),'javascript:void(0);')
+        # driver.find_element_by_id('submission').click()
+
+        #<!-- %input#next-step.form-control.submit{:style => "", :href => "javascript:void(0);", :type => "button", :value => "下一步", :onclick => "jumpTo('span.three-step')"}/ -->
+        # try:
+        #     # driver.find_element_by_id('submission').click()
+        #     element = WebDriverWait(driver,10).until(EC.presence_of_element_located(
+        #                                              driver.find_element_by_xpath("//div/div/div/div[2]/p").click()))
+        # finally:
+        #     driver.quit()
+
+
+
+
+
 
 
 
@@ -160,6 +189,9 @@ class Untitled(unittest.TestCase):
         print(bank)
     except:
         print('有错误了')
+
+    # finally:
+    #     driver.quit()
 
    # driver.quit()
 

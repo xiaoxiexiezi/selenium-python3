@@ -4,9 +4,14 @@ import time
 import re
 from _random_amount_ import qu
 from _getuser_ import count2
+from selenium.webdriver.common.action_chains import ActionChains
 driver = webdriver.Chrome('/Users/tcw/chromedriver')
-driver.get("https://testv2.pandai.cn")
-time.sleep(2)
+
+# driver.get("https://testv2.pandai.cn")
+# time.sleep(2)
+builder = ActionChains(driver)
+ActionChains(driver).key_down(Keys.COMMAND).send_keys('t').key_up(Keys.CONTROL).perform()
+driver.find_element_by_xpath("//div[6]/div[2]/div/p[2]").send_keys(Keys.COMMAND,'t')
 #id = cp 元素的文本信息
 data=driver.find_element_by_xpath("//div[6]/div[2]/div/p[2]").text
 print('网站标题信息:'+ driver.title)
@@ -57,6 +62,7 @@ alltab = driver.window_handles
 print('打开了' + str(len(alltab)) +'个标签')
 print('第一个标签的句柄是:' + alltab[0])
 print('第二个标签的句柄是:' + alltab[1])
+
 
 
 driver.switch_to_window(alltab[0])
