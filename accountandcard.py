@@ -53,6 +53,7 @@ class Untitled(unittest.TestCase):
         #获取图形验证码
         js = "window.open('https://testv2.pandai.cn/home/get_captcha_text')"
         driver.execute_script(js)
+        # driver.get('https://testv2.pandai.cn/home/get_captcha_text')
         time.sleep(2)
 
         alltab = driver.window_handles
@@ -69,14 +70,24 @@ class Untitled(unittest.TestCase):
         alltab = driver.window_handles
         # 获取图形验证码
 
+        try:
+            a = driver.find_element_by_xpath('//div[8]/h2')
+
+            print(123)
+        except:
+            print()
+
+        driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").send_keys(dr55)
+        time.sleep(5)
+        driver.find_element_by_css_selector('button.confirm').click()
 
 
         # driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").clear()
         driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").send_keys(dr55)
         time.sleep(5)
         driver.find_element_by_css_selector('button.confirm').click()
-        time.sleep(0.5)
-        driver.find_element_by_css_selector('button.confirm').click()
+        # time.sleep(0.5)
+        # driver.find_element_by_css_selector('button.confirm').click()
 
 
 
