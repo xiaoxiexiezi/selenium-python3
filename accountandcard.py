@@ -60,7 +60,7 @@ class Untitled(unittest.TestCase):
         js = "window.open('https://testv2.pandai.cn/home/get_captcha_text')"
         driver.execute_script(js)
         # driver.get('https://testv2.pandai.cn/home/get_captcha_text')
-        time.sleep(2)
+        time.sleep(1)
 
         alltab = driver.window_handles
         print('打开了' + str(len(alltab)) + '个标签')
@@ -92,67 +92,74 @@ class Untitled(unittest.TestCase):
                 driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").send_keys(dr55)
                 time.sleep(5)
                 driver.find_element_by_css_selector('button.confirm').click()
+                driver.find_element_by_css_selector('button.confirm').click()
+
                 driver.find_element_by_xpath('//div[7]/button[2]').click()
             print(123)
         except:
             print(444)
             driver.quit()
+        time.sleep(2)
+
+
+        #***********打开第二个浏览器获取短信验证码****************
+        driver2 = webdriver.Chrome("/Users/tcw/chromedriver")
+        driver2.get("https://testv2.pandai.cn/admin/portal/query_captcha")
+        print('网站标题信息:' + driver2.title)
 
         #获取短信验证码
-        js2 = "window.open('https://testv2.pandai.cn/admin/portal/query_captcha')"
-        driver.execute_script(js2)
-        time.sleep(2)
-        alltab3 = driver.window_handles
-        print('打开了' + str(len(alltab)) + '个标签')
-        print('第一个标签的句柄是:' + alltab3[0])
-        print('第二个标签的句柄是:' + alltab3[1])
-        driver.switch_to_window(alltab3[1])
+        # js2 = "window.open('https://testv2.pandai.cn/admin/portal/query_captcha')"
+        # driver.execute_script(js2)
+        # time.sleep(2)
+        # alltab3 = driver.window_handles
+        # print('打开了' + str(len(alltab3)) + '个标签')
+        # print('第一个标签的句柄是:' + alltab3[0])
+        # print('第二个标签的句柄是:' + alltab3[1])
+        # driver.switch_to_window(alltab3[2])
         time.sleep(1)
-        driver.find_element_by_id("login").clear()
-        driver.find_element_by_id("login").send_keys("develop_admin")
-        driver.find_element_by_id("password").clear()
-        driver.find_element_by_id("password").send_keys("test_123")
-        driver.find_element_by_xpath("//button[@type='submit']").click()
+        driver2.find_element_by_id("login").clear()
+        driver2.find_element_by_id("login").send_keys("develop_admin")
+        driver2.find_element_by_id("password").clear()
+        driver2.find_element_by_id("password").send_keys("test_123")
+        driver2.find_element_by_xpath("//button[@type='submit']").click()
         time.sleep(1)
-        driver.get('https://testv2.pandai.cn/admin/portal/query_captcha')
-        driver.switch_to_window(alltab3[1])
+        driver2.get('https://testv2.pandai.cn/admin/portal/query_captcha')
+        #driver.switch_to_window(alltab3[1])
         # print(alltab3[1])
         time.sleep(1)
-        driver.find_element_by_name("mobile").send_keys(count2)
+        driver2.find_element_by_name("mobile").send_keys(count2)
         time.sleep(5)
-        driver.find_element_by_xpath(u"//input[@value='查询']").click()
+        driver2.find_element_by_xpath(u"//input[@value='查询']").click()
         time.sleep(1)
-        jg = driver.find_element_by_css_selector("p.form-controls").text
+        jg = driver2.find_element_by_css_selector("p.form-controls").text
         print(jg)
         jg6 = jg[-6:]
         print(jg6)
         # 获取短信验证码
-        alltab5 = driver.window_handles
-        driver.switch_to_window(alltab5[1])
+        time.sleep(2)
+        driver2.quit()
+
+        alltab4 = driver.window_handles
+        print('打开了' + str(len(alltab4)) + '个标签')
+        print('第一个标签的句柄是:' + alltab4[0])
+        print('第二个标签的句柄是:' + alltab4[1])
+        time.sleep(2)
+        # driver.switch_to_window(alltab4[1])
+
       #  driver.close()
-        driver.switch_to_window(alltab5[0])
-        alltab5 = driver.window_handles
+        driver.switch_to_window(alltab4[0])
+        # alltab5 = driver.window_handles
 
-        # driver.find_element_by_id('idcode').send_keys(jg6)
-        # driver.implicitly_wait(10)
-        # driver.execute_script(arguments[0].click(),'javascript:void(0);')
-        # driver.find_element_by_id('submission').click()
+        driver.find_element_by_id('idcode').send_keys(jg6)
+        time.sleep(555)
+        driver.find_element_by_id('submission').click()
 
-        #<!-- %input#next-step.form-control.submit{:style => "", :href => "javascript:void(0);", :type => "button", :value => "下一步", :onclick => "jumpTo('span.three-step')"}/ -->
-        # try:
-        #     # driver.find_element_by_id('submission').click()
-        #     element = WebDriverWait(driver,10).until(EC.presence_of_element_located(
-        #                                              driver.find_element_by_xpath("//div/div/div/div[2]/p").click()))
-        # finally:
-        #     driver.quit()
-
-
-
-
-
-
-
-
+        try:
+            # driver.find_element_by_id('submission').click()
+            element = WebDriverWait(driver,10).until(EC.presence_of_element_located(
+                                                     driver.find_element_by_xpath("//div/div/div/div[2]/p").click()))
+        finally:
+            driver.quit()
 
     time.sleep(5)
 

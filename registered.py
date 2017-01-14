@@ -4,7 +4,7 @@ from selenium import webdriver
 import time
 from _random_phone_ import u
 import datetime
-class Untitled(unittest.TestCase):
+def run():
 
         driver = webdriver.Chrome("/Users/tcw/chromedriver")
         driver.get("https://testv2.pandai.cn/registers/new")
@@ -94,7 +94,6 @@ class Untitled(unittest.TestCase):
         time.sleep(5)
         driver.quit()
 
-if __name__ == "__main__":
-    unittest.main()
-
+for i in range(1,10):
+    run()
 
