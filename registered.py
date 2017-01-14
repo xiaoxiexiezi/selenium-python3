@@ -2,7 +2,6 @@
 import unittest
 from selenium import webdriver
 import time
-from _random_phone_ import u
 import datetime
 def run():
 
@@ -16,36 +15,33 @@ def run():
 
         alltab = driver.window_handles
         print('打开了' + str(len(alltab)) +'个标签')
-        print('第一个标签的句柄是:' + alltab[0])
-        print('第二个标签的句柄是:' + alltab[1])
-        a = driver.switch_to_window(alltab[1])
+        # print('第一个标签的句柄是:' + alltab[0])
+        # print('第二个标签的句柄是:' + alltab[1])
+        driver.switch_to_window(alltab[1])
         dr55 = driver.find_element_by_xpath("//pre").text
         print('本次验证码是:' + dr55)
 
         driver.switch_to_window(alltab[1])
         driver.close()
         driver.switch_to_window(alltab[0])
-        # alltab = driver.window_handles
-        # print('打开了' + str(len(alltab)) +'个标签')
-        # print('第一个标签的句柄是:' + alltab[0])
 
+        from _random_phone_ import randomphone
+        u1 = randomphone()
 
         driver.find_element_by_id("username").clear()
-        driver.find_element_by_id("username").send_keys(u) #从_random_phone_ import u读取随机生成的手机号去注册
-
+        driver.find_element_by_id("username").send_keys(u1) #从_random_phone_ import u读取随机生成的手机号去注册
         driver.find_element_by_id("verification").clear()
         driver.find_element_by_id("verification").send_keys(dr55)
-
         driver.find_element_by_id("submit").click()
-        time.sleep(5)
+        time.sleep(1)
 
         js2="window.open('https://testv2.pandai.cn/admin/portal/query_captcha')"
         driver.execute_script(js2)
         time.sleep(5)
         alltab3 = driver.window_handles
-        print('打开了' + str(len(alltab)) +'个标签')
-        print('第一个标签的句柄是:' + alltab3[0])
-        print('第二个标签的句柄是:' + alltab3[1])
+        # print('打开了' + str(len(alltab)) +'个标签')
+        # print('第一个标签的句柄是:' + alltab3[0])
+        # print('第二个标签的句柄是:' + alltab3[1])
         driver.switch_to_window(alltab3[1])
 
         time.sleep(2)
@@ -63,9 +59,9 @@ def run():
         #print(alltab3[1])
         time.sleep(1)
 
-        driver.find_element_by_name("mobile").send_keys(u)
+        driver.find_element_by_name("mobile").send_keys(u1)
         driver.find_element_by_xpath(u"//input[@value='查询']").click()
-
+        time.sleep(1)
         jg = driver.find_element_by_css_selector("p.form-controls").text
         print(jg)
         jg6 = jg[-6:]
@@ -84,7 +80,7 @@ def run():
 
         now = datetime.datetime.now()
         phonefile = open("/Users/tcw/already_registered.txt", 'a',encoding='utf-8')
-        phonefile.write('本次注册使用手机号为：' + u + '|' + str(now) + '\n' )
+        phonefile.write('本次注册使用手机号为：' + u1 + '|' + str(now) + '\n' )
         phonefile.close()
         phonefile1 = "/Users/tcw/already_registered.txt"
         count2 = len(open(phonefile1,'rU',encoding='utf-8').readlines()) #获取文件总行数
@@ -93,7 +89,10 @@ def run():
 
         time.sleep(5)
         driver.quit()
+count = int(input('输入生成次数:'))
+for i in range(count):
+        run()
+print('总共注册了|' , count ,'|个用户')
 
-for i in range(1,10):
-    run()
+
 
