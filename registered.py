@@ -1,5 +1,4 @@
 #coding=utf-8
-import unittest
 from selenium import webdriver
 import time
 import datetime
@@ -15,8 +14,6 @@ def run():
 
         alltab = driver.window_handles
         print('打开了' + str(len(alltab)) +'个标签')
-        # print('第一个标签的句柄是:' + alltab[0])
-        # print('第二个标签的句柄是:' + alltab[1])
         driver.switch_to_window(alltab[1])
         dr55 = driver.find_element_by_xpath("//pre").text
         print('本次验证码是:' + dr55)

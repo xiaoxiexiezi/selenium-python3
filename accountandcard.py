@@ -70,24 +70,28 @@ class Untitled(unittest.TestCase):
         dr55 = driver.find_element_by_xpath("//pre").text
         print('本次图形验证码是:' + dr55)
         # 获取图形验证码
-        driver.switch_to_window(alltab[1])
-        #driver.close()
-        driver.switch_to_window(alltab[0])
-        alltab = driver.window_handles
+        driver.switch_to.window(alltab[1])
+        driver.close()
+        driver.switch_to.window(alltab[0])
+        # alltab = driver.window_handles
         # 获取图形验证码
         print('********')
-        a = driver.find_element_by_xpath('//div[8]/h2').text
-        totalCount = re.sub("\D", "", a)
-        print(totalCount)
+        # a = driver.find_element_by_xpath('//div[8]/h2').text
+        # totalCount = re.sub("\D", "", a)
+        # print(totalCount)
+
+        #<!-- %input#next-step.form-control.submit{:style => "", :href => "javascript:void(0);", :type => "button", :value => "下一步",
+        # :onclick => "jumpTo('span.three-step')"}/ -->
 
         try:
             a1 = driver.find_element_by_xpath('//div[8]/h2').text
             print(a1)
             if a1 == '获取验证码成功':
                 driver.find_element_by_xpath('//div[7]/button[2]').click()
-            elif '秒之后重新尝试' in a:
+                print('a1')
+            elif '秒之后重新尝试' in a1:
                 driver.find_element_by_xpath('//div[7]/button[2]').click()
-
+                print('a2')
             else:
                 driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").send_keys(dr55)
                 time.sleep(5)
@@ -95,6 +99,7 @@ class Untitled(unittest.TestCase):
                 driver.find_element_by_css_selector('button.confirm').click()
 
                 driver.find_element_by_xpath('//div[7]/button[2]').click()
+                print('else')
             print(123)
         except:
             print(444)
@@ -115,7 +120,7 @@ class Untitled(unittest.TestCase):
         # print('打开了' + str(len(alltab3)) + '个标签')
         # print('第一个标签的句柄是:' + alltab3[0])
         # print('第二个标签的句柄是:' + alltab3[1])
-        # driver.switch_to_window(alltab3[2])
+        # driver.close(alltab3[1])
         time.sleep(1)
         driver2.find_element_by_id("login").clear()
         driver2.find_element_by_id("login").send_keys("develop_admin")
@@ -138,28 +143,31 @@ class Untitled(unittest.TestCase):
         # 获取短信验证码
         time.sleep(2)
         driver2.quit()
-
-        alltab4 = driver.window_handles
-        print('打开了' + str(len(alltab4)) + '个标签')
-        print('第一个标签的句柄是:' + alltab4[0])
-        print('第二个标签的句柄是:' + alltab4[1])
+        #
+        # alltab4 = driver.window_handles
+        # print('打开了' + str(len(alltab4)) + '个标签')
+        # print('第一个标签的句柄是:' + alltab4[0])
+        # print('第二个标签的句柄是:' + alltab4[1])
         time.sleep(2)
         # driver.switch_to_window(alltab4[1])
 
       #  driver.close()
-        driver.switch_to_window(alltab4[0])
+        driver.switch_to_window(alltab[0])
         # alltab5 = driver.window_handles
 
         driver.find_element_by_id('idcode').send_keys(jg6)
-        time.sleep(555)
+        time.sleep(1)
         driver.find_element_by_id('submission').click()
+        # driver.find_element_by_css_selector('span.two-step.hover').click()
 
-        try:
-            # driver.find_element_by_id('submission').click()
-            element = WebDriverWait(driver,10).until(EC.presence_of_element_located(
-                                                     driver.find_element_by_xpath("//div/div/div/div[2]/p").click()))
-        finally:
-            driver.quit()
+        #<!-- %input#next-step.form-control.submit{:style => "", :href => "javascript:void(0);", :type => "button", :value => "下一步",
+        #  :onclick => "jumpTo('span.three-step')"}/ -->
+        # try:
+        #     # driver.find_element_by_id('submission').click()
+        #     element = WebDriverWait(driver,10).until(EC.presence_of_element_located(
+        #                                              driver.find_element_by_xpath("//div/div/div/div[2]/p").click()))
+        # finally:
+        #   #  driver.quit()
 
     time.sleep(5)
 

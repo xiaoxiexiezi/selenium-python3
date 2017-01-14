@@ -5,8 +5,8 @@ import re
 from _random_amount_ import qu
 from _getuser_ import count2
 from selenium.webdriver.common.action_chains import ActionChains
-driver = webdriver.Chrome('/Users/tcw/chromedriver')
-
+driver = webdriver.Firefox()
+driver.implicitly_wait(30)
 driver.get("https://testv2.pandai.cn")
 time.sleep(2)
 # builder = ActionChains(driver)
@@ -23,7 +23,7 @@ time.sleep(2)
 #source.close()#关闭文件
 driver.find_element_by_link_text(u"首页").click()
 driver.find_element_by_link_text(u"登录").click()
-driver.find_element_by_id("login").clear()
+time.sleep(2)
 driver.find_element_by_id("login").send_keys(count2)
 time.sleep(2)
 driver.find_element_by_id("password").clear()
