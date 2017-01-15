@@ -58,3 +58,580 @@ this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> re
 1484451417289	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50021
 1484451417696	Marionette	INFO	Listening on port 50021
 AVF info: Successfully connected to the Intel plugin, offline Gen75 
+1484469658562	geckodriver	INFO	Listening on 127.0.0.1:60416
+1484469659497	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.8F0IjlTtNn7q
+1484469659498	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484469659564	geckodriver::marionette	INFO	Connecting to Marionette on localhost:60422
+1484469661569	Marionette	INFO	Listening on port 60422
+[Child 4531] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4531] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1484469689522	geckodriver	INFO	Listening on 127.0.0.1:60552
+1484469690425	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.wnSfcTbBPZPa
+1484469690425	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484469690431	geckodriver::marionette	INFO	Connecting to Marionette on localhost:60558
+1484469692877	Marionette	INFO	Listening on port 60558
+[Child 4536] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4536] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1484469777427	geckodriver	INFO	Listening on 127.0.0.1:60702
+1484469777435	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.GApxEgjcA04K
+1484469777436	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484469777438	geckodriver::marionette	INFO	Connecting to Marionette on localhost:60706
+1484469778874	Marionette	INFO	Listening on port 60706
+1484470071289	geckodriver	INFO	Listening on 127.0.0.1:60834
+1484470072216	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.tPWmLxkjkVcR
+1484470072217	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484470072218	geckodriver::marionette	INFO	Connecting to Marionette on localhost:60840
+1484470073780	Marionette	INFO	Listening on port 60840
+1484470183750	geckodriver	INFO	Listening on 127.0.0.1:60930
+1484470184752	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.k7nolLyfKIur
+1484470184752	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484470184754	geckodriver::marionette	INFO	Connecting to Marionette on localhost:60936
+1484470185206	Marionette	INFO	Listening on port 60936
+1484470300067	geckodriver	INFO	Listening on 127.0.0.1:61006
+1484470301068	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.eC1bJEhhDHHR
+1484470301069	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484470301070	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61012
+1484470301518	Marionette	INFO	Listening on port 61012
+1484470594534	geckodriver	INFO	Listening on 127.0.0.1:61197
+1484470595521	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.9GP2X1yAhW5V
+1484470595522	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484470595524	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61203
+1484470597037	Marionette	INFO	Listening on port 61203
+1484470663488	geckodriver	INFO	Listening on 127.0.0.1:61299
+1484470664472	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.K8bb3mJ3U2dd
+1484470664473	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484470664475	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61305
+1484470665015	Marionette	INFO	Listening on port 61305
+1484470735189	geckodriver	INFO	Listening on 127.0.0.1:61379
+1484470736191	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.O2imeRavA5Qi
+1484470736191	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484470736193	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61385
+1484470736661	Marionette	INFO	Listening on port 61385
+1484470800534	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1484470800538	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1484470814663	geckodriver	INFO	Listening on 127.0.0.1:61459
+1484470815658	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.GUP3I3MgEDUe
+1484470815658	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484470815660	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61465
+1484470817123	Marionette	INFO	Listening on port 61465
+1484470932710	geckodriver	INFO	Listening on 127.0.0.1:61557
+1484470933712	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.OUc6YOtKDQPN
+1484470933713	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484470933714	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61563
+1484470934189	Marionette	INFO	Listening on port 61563
+1484470965527	geckodriver	INFO	Listening on 127.0.0.1:61624
+[Child 4751] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4751] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1484470966402	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.NYoQxRuqxgfY
+1484470966403	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484470966411	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61630
+1484470968706	Marionette	INFO	Listening on port 61630
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+Marionette threw an error: [Exception... "Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0x80070057 (NS_ERROR_ILLEGAL_VALUE)"  location: "JS frame :: chrome://marionette/content/proxy.js :: sendReply_ :: line 187"  data: no]
+sendReply_@chrome://marionette/content/proxy.js:187:5
+reply@chrome://marionette/content/proxy.js:176:7
+sendToServer@chrome://marionette/content/listener.js:430:3
+sendError@chrome://marionette/content/listener.js:464:3
+dispatch/</<@chrome://marionette/content/listener.js:201:40
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:940:21
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+[Child 4779] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4779] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1484471206432	geckodriver	INFO	Listening on 127.0.0.1:61815
+1484471207293	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.AHPc90gxS5Jx
+1484471207294	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471207323	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61821
+1484471209302	Marionette	INFO	Listening on port 61821
+1484471243347	geckodriver	INFO	Listening on 127.0.0.1:61916
+1484471243358	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.M0V0xmtzKqfK
+1484471243359	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471243361	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61920
+1484471244440	Marionette	INFO	Listening on port 61920
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+Marionette threw an error: [Exception... "Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0x80070057 (NS_ERROR_ILLEGAL_VALUE)"  location: "JS frame :: chrome://marionette/content/proxy.js :: sendReply_ :: line 187"  data: no]
+sendReply_@chrome://marionette/content/proxy.js:187:5
+reply@chrome://marionette/content/proxy.js:176:7
+sendToServer@chrome://marionette/content/listener.js:430:3
+sendError@chrome://marionette/content/listener.js:464:3
+dispatch/</<@chrome://marionette/content/listener.js:201:40
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:940:21
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x500001,name=PCrashReporter::Msg_AnnotateCrashReport) Channel error: cannot send/recv
+
+Crash Annotation GraphicsCriticalError: |[C0][GFX1-]: Receive IPC close with reason=AbnormalShutdown (t=34.7205) 
+###!!! [Child][MessageChannel] Error: (msgtype=0x4A00E9,name=PContent::Msg_GraphicsError) Channel error: cannot send/recv
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1484471298299	geckodriver	INFO	Listening on 127.0.0.1:62009
+1484471299292	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.nkN716EH8wCp
+1484471299293	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471299310	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62015
+1484471300729	Marionette	INFO	Listening on port 62015
+1484471385356	geckodriver	INFO	Listening on 127.0.0.1:62115
+1484471386357	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.5tM9rd1Eu5iH
+1484471386358	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471386360	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62121
+1484471386819	Marionette	INFO	Listening on port 62121
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+Marionette threw an error: [Exception... "Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0x80070057 (NS_ERROR_ILLEGAL_VALUE)"  location: "JS frame :: chrome://marionette/content/proxy.js :: sendReply_ :: line 187"  data: no]
+sendReply_@chrome://marionette/content/proxy.js:187:5
+reply@chrome://marionette/content/proxy.js:176:7
+sendToServer@chrome://marionette/content/listener.js:430:3
+sendError@chrome://marionette/content/listener.js:464:3
+dispatch/</<@chrome://marionette/content/listener.js:201:40
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:940:21
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+[Child 4854] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4854] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1484471417215	geckodriver	INFO	Listening on 127.0.0.1:62183
+1484471418217	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.nsJ2VM9WoCJz
+1484471418217	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471418219	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62189
+1484471418691	Marionette	INFO	Listening on port 62189
+[Child 4876] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4876] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1484471446790	geckodriver	INFO	Listening on 127.0.0.1:62247
+1484471447791	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.nMQJyiQPmrC0
+1484471447792	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471447793	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62253
+1484471448297	Marionette	INFO	Listening on port 62253
+1484471476470	geckodriver	INFO	Listening on 127.0.0.1:62310
+1484471477471	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.3HzYEGDuxUhK
+1484471477472	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471477473	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62316
+1484471477936	Marionette	INFO	Listening on port 62316
+[Child 4915] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4915] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1484471496796	geckodriver	INFO	Listening on 127.0.0.1:62373
+1484471497800	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.TsFj4CeMSSKO
+1484471497801	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471497802	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62379
+1484471498258	Marionette	INFO	Listening on port 62379
+1484471585287	geckodriver	INFO	Listening on 127.0.0.1:62451
+1484471586287	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.e6PujaiqIhg4
+1484471586288	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471586290	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62457
+1484471586763	Marionette	INFO	Listening on port 62457
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+Marionette threw an error: [Exception... "Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0x80070057 (NS_ERROR_ILLEGAL_VALUE)"  location: "JS frame :: chrome://marionette/content/proxy.js :: sendReply_ :: line 187"  data: no]
+sendReply_@chrome://marionette/content/proxy.js:187:5
+reply@chrome://marionette/content/proxy.js:176:7
+sendToServer@chrome://marionette/content/listener.js:430:3
+sendError@chrome://marionette/content/listener.js:464:3
+dispatch/</<@chrome://marionette/content/listener.js:201:40
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:940:21
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+[Child 4932] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4932] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1484471587789	geckodriver	INFO	Listening on 127.0.0.1:62470
+1484471587793	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.D09gG9pi9eMs
+1484471587794	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471587797	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62474
+1484471588491	Marionette	INFO	Listening on port 62474
+1484471601359	geckodriver	INFO	Listening on 127.0.0.1:62567
+1484471602350	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.5bptpR5COAAU
+1484471602351	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471602352	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62576
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: this.browserForTab is undefined
+Full stack: hasRemotenessChange@chrome://marionette/content/browser.js:233:9
+executeWhenReady@chrome://marionette/content/browser.js:264:9
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:218:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.getElementText@chrome://marionette/content/driver.js:1850:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:117:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:88:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:482:11
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: this.browserForTab is undefined
+Full stack: hasRemotenessChange@chrome://marionette/content/browser.js:233:9
+executeWhenReady@chrome://marionette/content/browser.js:264:9
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:218:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.getElementText@chrome://marionette/content/driver.js:1850:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:117:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:88:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:482:11
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+*************************
+*************************
+A coding exception was thrown in a Promise rejection callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: this.browserForTab is undefined
+Full stack: hasRemotenessChange@chrome://marionette/content/browser.js:233:9
+executeWhenReady@chrome://marionette/content/browser.js:264:9
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:218:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.getElementText@chrome://marionette/content/driver.js:1850:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:117:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:88:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:482:11
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+*************************
+Marionette threw an error: TypeError: this.browserForTab is undefined
+hasRemotenessChange@chrome://marionette/content/browser.js:233:9
+executeWhenReady@chrome://marionette/content/browser.js:264:9
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:218:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.getElementText@chrome://marionette/content/driver.js:1850:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:117:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:88:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:482:11
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+
+###!!! [Child][OnMaybeDequeueOne] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][OnMaybeDequeueOne] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][OnMaybeDequeueOne] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][OnMaybeDequeueOne] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][OnMaybeDequeueOne] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][OnMaybeDequeueOne] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][OnMaybeDequeueOne] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][OnMaybeDequeueOne] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][OnMaybeDequeueOne] Error: Channel closing: too late to send/recv, messages will be lost
+
+1484471602971	geckodriver	INFO	Listening on 127.0.0.1:62589
+1484471603972	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.1Qa5i3Tm4ZWm
+1484471603973	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471603979	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62615
+1484471604555	Marionette	INFO	Listening on port 62576
+1484471604555	Marionette	INFO	Listening on port 62615
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x500001,name=PCrashReporter::Msg_AnnotateCrashReport) Channel error: cannot send/recv
+
+Crash Annotation GraphicsCriticalError: |[C0][GFX1-]: Receive IPC close with reason=AbnormalShutdown (t=2.54532) 
+###!!! [Child][MessageChannel] Error: (msgtype=0x4A00E9,name=PContent::Msg_GraphicsError) Channel error: cannot send/recv
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 77: TypeError: this._recipeManager is null
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 77: TypeError: this._recipeManager is null
+1484471656558	geckodriver	INFO	Listening on 127.0.0.1:62856
+1484471657547	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.wAHge5yvMfnp
+1484471657547	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471657549	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62862
+1484471658677	Marionette	INFO	Listening on port 62862
+1484471773316	geckodriver	INFO	Listening on 127.0.0.1:62927
+1484471774318	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.OrO5ouN2lQ4w
+1484471774319	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471774320	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62933
+1484471774808	Marionette	INFO	Listening on port 62933
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+Marionette threw an error: [Exception... "Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0x80070057 (NS_ERROR_ILLEGAL_VALUE)"  location: "JS frame :: chrome://marionette/content/proxy.js :: sendReply_ :: line 187"  data: no]
+sendReply_@chrome://marionette/content/proxy.js:187:5
+reply@chrome://marionette/content/proxy.js:176:7
+sendToServer@chrome://marionette/content/listener.js:430:3
+sendError@chrome://marionette/content/listener.js:464:3
+dispatch/</<@chrome://marionette/content/listener.js:201:40
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:940:21
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x500001,name=PCrashReporter::Msg_AnnotateCrashReport) Channel error: cannot send/recv
+
+Crash Annotation GraphicsCriticalError: |[C0][GFX1-]: Receive IPC close with reason=AbnormalShutdown (t=18.9172) 
+###!!! [Child][MessageChannel] Error: (msgtype=0x4A00E9,name=PContent::Msg_GraphicsError) Channel error: cannot send/recv
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 77: TypeError: this._recipeManager is null
+1484471938394	geckodriver	INFO	Listening on 127.0.0.1:62998
+1484471939396	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.fYSrRW90mcVF
+1484471939397	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471939398	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63004
+1484471939948	geckodriver	INFO	Listening on 127.0.0.1:63017
+1484471940260	Marionette	INFO	Listening on port 63004
+1484471940949	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.8SWygaH5WXb5
+1484471940950	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471940952	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63030
+1484471941475	Marionette	INFO	Listening on port 63030
+[Child 5074] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 5074] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1484471944611	geckodriver	INFO	Listening on 127.0.0.1:63067
+1484471945598	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.PrDuoBwXmsAB
+1484471945667	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471945713	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63074
+1484471948248	Marionette	INFO	Listening on port 63074
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+Marionette threw an error: [Exception... "Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0x80070057 (NS_ERROR_ILLEGAL_VALUE)"  location: "JS frame :: chrome://marionette/content/proxy.js :: sendReply_ :: line 187"  data: no]
+sendReply_@chrome://marionette/content/proxy.js:187:5
+reply@chrome://marionette/content/proxy.js:176:7
+sendToServer@chrome://marionette/content/listener.js:430:3
+sendError@chrome://marionette/content/listener.js:464:3
+dispatch/</<@chrome://marionette/content/listener.js:201:40
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:940:21
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x500001,name=PCrashReporter::Msg_AnnotateCrashReport) Channel error: cannot send/recv
+
+Crash Annotation GraphicsCriticalError: |[C0][GFX1-]: Receive IPC close with reason=AbnormalShutdown (t=28.0585) 
+###!!! [Child][MessageChannel] Error: (msgtype=0x4A00E9,name=PContent::Msg_GraphicsError) Channel error: cannot send/recv
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1484471998485	geckodriver	INFO	Listening on 127.0.0.1:63319
+1484471999479	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.J1Sd5DNgFLzN
+1484471999481	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471999484	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63325
+1484471999557	geckodriver	INFO	Listening on 127.0.0.1:63328
+1484471999563	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.wNq5SYp0A0fa
+1484471999577	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484471999615	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63332
+1484472000976	Marionette	INFO	Listening on port 63325
+1484472000982	Marionette	INFO	Listening on port 63332
+1484472002146	geckodriver	INFO	Listening on 127.0.0.1:63397
+1484472003149	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.r5NHcP1cBgiU
+1484472003150	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484472003152	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63408
+1484472003701	Marionette	INFO	Listening on port 63408
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x500001,name=PCrashReporter::Msg_AnnotateCrashReport) Channel error: cannot send/recv
+
+Crash Annotation GraphicsCriticalError: |[C0][GFX1-]: Receive IPC close with reason=AbnormalShutdown (t=2.32669) 
+###!!! [Child][MessageChannel] Error: (msgtype=0x4A00E9,name=PContent::Msg_GraphicsError) Channel error: cannot send/recv
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1484472005111	geckodriver	INFO	Listening on 127.0.0.1:63439
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x500001,name=PCrashReporter::Msg_AnnotateCrashReport) Channel error: cannot send/recv
+
+Crash Annotation GraphicsCriticalError: |[C0][GFX1-]: Receive IPC close with reason=AbnormalShutdown (t=0.994972) 
+###!!! [Child][MessageChannel] Error: (msgtype=0x4A00E9,name=PContent::Msg_GraphicsError) Channel error: cannot send/recv
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1484472006112	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.lyJeNx2xnZC3
+1484472006113	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484472006121	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63460
+1484472006737	Marionette	INFO	Listening on port 63460
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: can't access dead object
+Full stack: find_@chrome://marionette/content/element.js:279:7
+element.find/</findElements<@chrome://marionette/content/element.js:250:15
+implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:576:15
+
+*************************
+Marionette threw an error: [Exception... "Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0x80070057 (NS_ERROR_ILLEGAL_VALUE)"  location: "JS frame :: chrome://marionette/content/proxy.js :: sendReply_ :: line 187"  data: no]
+sendReply_@chrome://marionette/content/proxy.js:187:5
+reply@chrome://marionette/content/proxy.js:176:7
+sendToServer@chrome://marionette/content/listener.js:430:3
+sendError@chrome://marionette/content/listener.js:464:3
+dispatch/</<@chrome://marionette/content/listener.js:201:40
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:940:21
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+[Child 5145] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 5145] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1484472037648	geckodriver	INFO	Listening on 127.0.0.1:63517
+1484472037651	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.TmOlbIyye9qU
+1484472037652	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484472037654	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63521
+1484472038313	Marionette	INFO	Listening on port 63521
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x500001,name=PCrashReporter::Msg_AnnotateCrashReport) Channel error: cannot send/recv
+
+Crash Annotation GraphicsCriticalError: |[C0][GFX1-]: Receive IPC close with reason=AbnormalShutdown (t=2.29046) 
+###!!! [Child][MessageChannel] Error: (msgtype=0x4A00E9,name=PContent::Msg_GraphicsError) Channel error: cannot send/recv
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1484472053973	geckodriver	INFO	Listening on 127.0.0.1:63548
+1484472054975	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.tnzNOWiS2PpI
+1484472054976	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484472054977	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63554
+1484472055443	Marionette	INFO	Listening on port 63554

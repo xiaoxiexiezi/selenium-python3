@@ -4,9 +4,11 @@ import time
 import datetime
 def run():
 
-        driver = webdriver.Chrome("/Users/tcw/chromedriver")
+        # driver = webdriver.Chrome("/Users/tcw/chromedriver")
+        driver = webdriver.Firefox()
         driver.get("https://testv2.pandai.cn/registers/new")
         print('网站标题信息:'+ driver.title)
+        driver.implicitly_wait(20)
         js="window.open('https://testv2.pandai.cn/home/get_captcha_text')"
         driver.execute_script(js)
         time.sleep(2)
@@ -14,13 +16,13 @@ def run():
 
         alltab = driver.window_handles
         print('打开了' + str(len(alltab)) +'个标签')
-        driver.switch_to_window(alltab[1])
+        driver.switch_to.window(alltab[1])
         dr55 = driver.find_element_by_xpath("//pre").text
         print('本次验证码是:' + dr55)
 
-        driver.switch_to_window(alltab[1])
+        driver.switch_to.window(alltab[1])
         driver.close()
-        driver.switch_to_window(alltab[0])
+        driver.switch_to.window(alltab[0])
 
         from _random_phone_ import randomphone
         u1 = randomphone()

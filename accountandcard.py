@@ -9,9 +9,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class Untitled(unittest.TestCase):
-    driver = webdriver.Chrome("/Users/tcw/chromedriver")
+    # driver = webdriver.Chrome("/Users/tcw/chromedriver")
+    driver = webdriver.Firefox()
     driver.get("https://testv2.pandai.cn/sessions/new#")
     print('网站标题信息:'+ driver.title)
+    driver.implicitly_wait(20)
     time.sleep(2)
     driver.find_element_by_id("login").clear()
     driver.find_element_by_id("login").send_keys(count2)
@@ -37,13 +39,15 @@ class Untitled(unittest.TestCase):
         print('--------------')
         print('该用户身份' + assert2  )
         print('--------------')
+        time.sleep(2)
+        #driver.find_element_by_link_text(u"未认证").click()
 
     except:
         print("测试失败")
         driver.find_element_by_xpath('//a[3]/b').click()
 
     if assert2 == '未认证':
-        driver.find_element_by_xpath('//a[3]/b').click()
+        driver.find_element_by_link_text(u"未认证").click()
         from _randomchinese_ import andstr
         time.sleep(2)
         driver.find_element_by_css_selector("p.afac-popup-cen2>span.two-step").click()
@@ -93,9 +97,10 @@ class Untitled(unittest.TestCase):
                 driver.find_element_by_xpath('//div[7]/button[2]').click()
                 print('a2')
             else:
-                driver.find_element_by_css_selector("fieldset > input[type=\"text\"]").send_keys(dr55)
-                time.sleep(5)
+                driver.find_element_by_xpath("//fieldset/input").send_keys(dr55)
+                time.sleep(3)
                 driver.find_element_by_css_selector('button.confirm').click()
+                time.sleep(1)
                 driver.find_element_by_css_selector('button.confirm').click()
 
                 driver.find_element_by_xpath('//div[7]/button[2]').click()
