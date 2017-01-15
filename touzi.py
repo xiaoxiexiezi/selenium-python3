@@ -24,7 +24,7 @@ time.sleep(2)
 driver.find_element_by_link_text(u"首页").click()
 driver.find_element_by_link_text(u"登录").click()
 driver.find_element_by_id("login").clear()
-driver.find_element_by_id("login").send_keys(count2)
+driver.find_element_by_id("login").send_keys('18611173913')
 time.sleep(2)
 driver.find_element_by_id("password").clear()
 driver.find_element_by_id("password").send_keys("test123")
@@ -56,28 +56,67 @@ driver.find_element_by_name("commit").click()
 #print(s)
 
 driver.find_element_by_link_text(u"理财").click()
-driver.find_element_by_link_text(u"土猪猪猪一").click()
+# driver.find_element_by_link_text(u"土猪猪猪一").click()
+driver.find_element_by_css_selector("p.product-bidding-name > a").click()
+from selenium.webdriver.support.ui import Select
+# Select(driver.find_element_by_id("select")).select_by_visible_text(u"20元,投资500元可用")
+tabs = driver.window_handles
+print('打开了',len(tabs),'个标签')
+driver.switch_to.window(tabs[1])
+time.sleep(2)
+jjj = driver.find_element_by_xpath("//option").text
+jj2 = jjj.replace('\n','')
+url = driver.current_url
+data = driver.page_source
 
-alltab = driver.window_handles
-print('打开了' + str(len(alltab)) +'个标签')
-print('第一个标签的句柄是:' + alltab[0])
-print('第二个标签的句柄是:' + alltab[1])
-
-
-
-driver.switch_to_window(alltab[0])
-driver.close()
-driver.switch_to_window(alltab[1])
-alltab = driver.window_handles
-print('打开了' + str(len(alltab)) +'个标签')
-print('第一个标签的句柄是:' + alltab[0])
-
-tz2 = driver.find_element_by_css_selector("div.rec-2").text
-time.sleep(3)
-if tz1 == tz2:
-    print('页面存在,测试通过')
-
-driver.find_element_by_link_text(u"还款列表").click() # 还款列表
-driver.find_element_by_link_text(u"投资记录").click() # 投资记录
+print(data)
+# aaa = re.findall('<option invest_lower(?P<invest_lower>.+?)</option>',data,re.S)
+aaa = re.findall('time_lower="1" (.+?)</option>',data,re.S)
+print(aaa)
+# if  aaa:
+#     h1user = aaa.group()+
+#     print('123')
+#     print(h1user)
+# else:
+#     print('没搜到')
 
 driver.quit()
+
+
+
+
+
+
+#
+#
+# print(jj2)
+# if '0' in jj2:
+#     print('没有可用现金券')
+# else:
+#     Select(driver.find_element_by_id("select")).select_by_visible_text(u"20元,投资500元可用")
+#
+#
+#
+# alltab = driver.window_handles
+# print('打开了' + str(len(alltab)) +'个标签')
+# print('第一个标签的句柄是:' + alltab[0])
+# print('第二个标签的句柄是:' + alltab[1])
+#
+#
+#
+# driver.switch_to_window(alltab[0])
+# driver.close()
+# driver.switch_to_window(alltab[1])
+# alltab = driver.window_handles
+# print('打开了' + str(len(alltab)) +'个标签')
+# print('第一个标签的句柄是:' + alltab[0])
+#
+# tz2 = driver.find_element_by_css_selector("div.rec-2").text
+# time.sleep(3)
+# if tz1 == tz2:
+#     print('页面存在,测试通过')
+#
+# driver.find_element_by_link_text(u"还款列表").click() # 还款列表
+# driver.find_element_by_link_text(u"投资记录").click() # 投资记录
+#
+# driver.quit()
