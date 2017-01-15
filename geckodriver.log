@@ -852,3 +852,20 @@ Crash Annotation GraphicsCriticalError: |[C0][GFX1-]: Receive IPC close with rea
 1484484423990	Marionette	INFO	Listening on port 65350
 [Child 5701] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
 [Child 5701] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1484486575965	geckodriver	INFO	Listening on 127.0.0.1:49616
+1484486576809	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.mGnq6Eireb3A
+1484486576848	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484486576867	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49622
+1484486578785	Marionette	INFO	Listening on port 49622
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+JavaScript warning: http://uat.soopay.net/spay/static/p2p/web/js/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 77: TypeError: this._recipeManager is null
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 77: TypeError: this._recipeManager is null
+JavaScript warning: http://uat.soopay.net/spay/static/p2p/web/js/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://uat.soopay.net/spay/static/p2p/web/js/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://uat.soopay.net/spay/static/p2p/web/js/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead

@@ -23,7 +23,6 @@ class Untitled(unittest.TestCase):
     phonefile1 = "/Users/tcw/already_registered.txt"
     count3 = len(open(phonefile1,'rU',encoding='utf-8').readlines()) #获取文件总行数
     print('总行数:' + str(count3))
-    #phonefile1.close()
 
 
     driver.find_element_by_id("password").clear()
@@ -40,7 +39,6 @@ class Untitled(unittest.TestCase):
         print('该用户身份',assert2  )
         print('--------------')
         time.sleep(2)
-        #driver.find_element_by_link_text(u"未认证").click()
 
     except:
         print("测试失败")
@@ -63,7 +61,6 @@ class Untitled(unittest.TestCase):
         #获取图形验证码
         js = "window.open('https://testv2.pandai.cn/home/get_captcha_text')"
         driver.execute_script(js)
-        # driver.get('https://testv2.pandai.cn/home/get_captcha_text')
         time.sleep(1)
 
         alltab = driver.window_handles
@@ -77,15 +74,8 @@ class Untitled(unittest.TestCase):
         driver.switch_to.window(alltab[1])
         driver.close()
         driver.switch_to.window(alltab[0])
-        # alltab = driver.window_handles
         # 获取图形验证码
         print('********')
-        # a = driver.find_element_by_xpath('//div[8]/h2').text
-        # totalCount = re.sub("\D", "", a)
-        # print(totalCount)
-
-        #<!-- %input#next-step.form-control.submit{:style => "", :href => "javascript:void(0);", :type => "button", :value => "下一步",
-        # :onclick => "jumpTo('span.three-step')"}/ -->
 
         try:
             a1 = driver.find_element_by_xpath('//div[8]/h2').text
@@ -115,17 +105,8 @@ class Untitled(unittest.TestCase):
         #***********打开第二个浏览器获取短信验证码****************
         driver2 = webdriver.Chrome("/Users/tcw/chromedriver")
         driver2.get("https://testv2.pandai.cn/admin/portal/query_captcha")
-        print('网站标题信息:',driver2.title)
-
+        print('这是打开的第二个浏览器')
         #获取短信验证码
-        # js2 = "window.open('https://testv2.pandai.cn/admin/portal/query_captcha')"
-        # driver.execute_script(js2)
-        # time.sleep(2)
-        # alltab3 = driver.window_handles
-        # print('打开了' + str(len(alltab3)) + '个标签')
-        # print('第一个标签的句柄是:' + alltab3[0])
-        # print('第二个标签的句柄是:' + alltab3[1])
-        # driver.close(alltab3[1])
         time.sleep(1)
         driver2.find_element_by_id("login").clear()
         driver2.find_element_by_id("login").send_keys("develop_admin")
@@ -134,8 +115,7 @@ class Untitled(unittest.TestCase):
         driver2.find_element_by_xpath("//button[@type='submit']").click()
         time.sleep(1)
         driver2.get('https://testv2.pandai.cn/admin/portal/query_captcha')
-        #driver.switch_to_window(alltab3[1])
-        # print(alltab3[1])
+
         time.sleep(1)
         driver2.find_element_by_name("mobile").send_keys(count2)
         time.sleep(5)
@@ -148,33 +128,14 @@ class Untitled(unittest.TestCase):
         # 获取短信验证码
         time.sleep(2)
         driver2.quit()
-        #
-        # alltab4 = driver.window_handles
-        # print('打开了' + str(len(alltab4)) + '个标签')
-        # print('第一个标签的句柄是:' + alltab4[0])
-        # print('第二个标签的句柄是:' + alltab4[1])
-        time.sleep(2)
-        # driver.switch_to_window(alltab4[1])
 
-      #  driver.close()
+        time.sleep(2)
         driver.switch_to_window(alltab[0])
-        # alltab5 = driver.window_handles
 
         driver.find_element_by_id('idcode').send_keys(jg6)
         time.sleep(1)
         driver.find_element_by_id('submission').click()
-        # driver.find_element_by_css_selector('span.two-step.hover').click()
 
-        #<!-- %input#next-step.form-control.submit{:style => "", :href => "javascript:void(0);", :type => "button", :value => "下一步",
-        #  :onclick => "jumpTo('span.three-step')"}/ -->
-        # try:
-        #     # driver.find_element_by_id('submission').click()
-        #     element = WebDriverWait(driver,10).until(EC.presence_of_element_located(
-        #                                              driver.find_element_by_xpath("//div/div/div/div[2]/p").click()))
-        # finally:
-        #   #  driver.quit()
-
-    time.sleep(5)
 
     print('*************************')
 
@@ -205,9 +166,11 @@ class Untitled(unittest.TestCase):
         if assert4 == '未绑定' :
             driver.find_element_by_xpath('html/body/div[3]/div[1]/div[1]/p[3]/a[4]').click()
             time.sleep(1)
-            driver.find_element_by_id('banknumber').send_keys()
-            banknum = driver.find_element_by_css_selector("div.afba-img-cen1 > p").text
-            print('该绑卡银行为：',bank,'|','卡号为：',banknum)
+            from banknum import random_banknum
+            banknum = random_banknum
+            driver.find_element_by_id('banknumber').send_keys(random_banknum)
+            # banknum1 = driver.find_element_by_css_selector("div.afba-img-cen1 > p").text
+            print('该绑卡银行为：',banknum,'|','卡号为：',banknum)
 
         else:
             pass

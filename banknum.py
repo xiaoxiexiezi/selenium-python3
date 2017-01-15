@@ -28,14 +28,13 @@ banknum = ([
     '621098100001835',
 
     # 建行
-    '622700381417017'
+    '622700381417017',
 
     # 平安银行
-    '623058000002438'
+    '623058000002438',
     ])
-
+#随机获取银行卡号
 from random import choice
 from _random_8_phone_ import random_str
-print(choice(banknum) + random_str(4))
-
-print(random_str(4))
+random_banknum = choice(banknum) + random_str(4)
+print(random_banknum)
