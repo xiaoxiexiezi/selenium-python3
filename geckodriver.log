@@ -869,3 +869,50 @@ JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 77: TypeEr
 JavaScript warning: http://uat.soopay.net/spay/static/p2p/web/js/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
 JavaScript warning: http://uat.soopay.net/spay/static/p2p/web/js/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
 JavaScript warning: http://uat.soopay.net/spay/static/p2p/web/js/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1484489021975	geckodriver	INFO	Listening on 127.0.0.1:49949
+1484489022821	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.HhTxl3He7GVd
+1484489022821	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484489022888	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49956
+1484489025792	Marionette	INFO	Listening on port 49956
+1484489158344	geckodriver	INFO	Listening on 127.0.0.1:50088
+1484489159237	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.LM49aDeMC3Op
+1484489159237	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484489159239	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50094
+1484489161018	Marionette	INFO	Listening on port 50094
+1484489575734	geckodriver	INFO	Listening on 127.0.0.1:50376
+1484489576594	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.ONKSON3wlSJX
+1484489576595	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484489576669	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50382
+1484489578409	Marionette	INFO	Listening on port 50382
+1484489667857	geckodriver	INFO	Listening on 127.0.0.1:50496
+1484489668852	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.KOL0dbunTDVy
+1484489668852	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484489668854	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50502
+1484489670469	Marionette	INFO	Listening on port 50502
+1484489835746	geckodriver	INFO	Listening on 127.0.0.1:50769
+1484489836587	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.iByX84HzDcaL
+1484489836588	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484489836648	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50775
+1484489838512	Marionette	INFO	Listening on port 50775
+1484489918670	geckodriver	INFO	Listening on 127.0.0.1:50882
+1484489918685	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.09RHi64pgEIT
+1484489918687	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484489918688	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50886
+1484489919844	Marionette	INFO	Listening on port 50886
+1484489998541	geckodriver	INFO	Listening on 127.0.0.1:50985
+1484489998546	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.TN3WYZiugG7j
+1484489998547	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484489998548	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50989
+1484489999242	Marionette	INFO	Listening on port 50989
+1484490887775	geckodriver	INFO	Listening on 127.0.0.1:51250
+1484490888772	mozprofile::profile	INFO	Using profile path /var/folders/ff/ndfsl9xd65jb68ptf6x3b_7h0000gn/T/rust_mozprofile.kweRPkk7xSlE
+1484490888773	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484490888832	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51256
+1484490890642	Marionette	INFO	Listening on port 51256
+JavaScript warning: http://uat.soopay.net/spay/static/p2p/web/js/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************

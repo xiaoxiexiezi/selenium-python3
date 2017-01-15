@@ -22,7 +22,7 @@ class Untitled(unittest.TestCase):
     print(a)
     phonefile1 = "/Users/tcw/already_registered.txt"
     count3 = len(open(phonefile1,'rU',encoding='utf-8').readlines()) #获取文件总行数
-    print('总行数:' + str(count3))
+    print('总行数1:' + str(count3))
 
 
     driver.find_element_by_id("password").clear()
@@ -168,6 +168,7 @@ class Untitled(unittest.TestCase):
             time.sleep(1)
             from banknum import random_banknum
             banknum = random_banknum
+            driver.find_element_by_id('banknumber').clear()
             driver.find_element_by_id('banknumber').send_keys(random_banknum)
             # banknum1 = driver.find_element_by_css_selector("div.afba-img-cen1 > p").text
             print('该绑卡银行为：',banknum,'|','卡号为：',banknum)
