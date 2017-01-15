@@ -37,7 +37,7 @@ class Untitled(unittest.TestCase):
     try:
         assert2 = driver.find_element_by_xpath('//p[3]/a').text
         print('--------------')
-        print('该用户身份' + assert2  )
+        print('该用户身份',assert2  )
         print('--------------')
         time.sleep(2)
         #driver.find_element_by_link_text(u"未认证").click()
@@ -67,12 +67,12 @@ class Untitled(unittest.TestCase):
         time.sleep(1)
 
         alltab = driver.window_handles
-        print('打开了' + str(len(alltab)) + '个标签')
-        print('第一个标签的句柄是:' + alltab[0])
-        print('第二个标签的句柄是:' + alltab[1])
+        print('打开了' + str(len(alltab)),'个标签')
+        print('第一个标签的句柄是:',alltab[0])
+        print('第二个标签的句柄是:',alltab[1])
         a = driver.switch_to_window(alltab[1])
         dr55 = driver.find_element_by_xpath("//pre").text
-        print('本次图形验证码是:' + dr55)
+        print('本次图形验证码是:',dr55)
         # 获取图形验证码
         driver.switch_to.window(alltab[1])
         driver.close()
@@ -115,7 +115,7 @@ class Untitled(unittest.TestCase):
         #***********打开第二个浏览器获取短信验证码****************
         driver2 = webdriver.Chrome("/Users/tcw/chromedriver")
         driver2.get("https://testv2.pandai.cn/admin/portal/query_captcha")
-        print('网站标题信息:' + driver2.title)
+        print('网站标题信息:',driver2.title)
 
         #获取短信验证码
         # js2 = "window.open('https://testv2.pandai.cn/admin/portal/query_captcha')"
@@ -181,7 +181,7 @@ class Untitled(unittest.TestCase):
     try: #检查手机号
         assert3 = driver.find_element_by_xpath('//p[3]/a[2]').text
         print('----------------------------------')
-        print('该用户手机号'+assert3+'：手机号为'+str(count2))
+        print('该用户手机号',assert3,'：手机号为',count2)
         print('----------------------------------')
     except:
         print()
@@ -189,7 +189,7 @@ class Untitled(unittest.TestCase):
     try:
         assert1 = driver.find_element_by_xpath("//a[contains(@href, '/verify_guides/new?step=one')]").text
         print('--------------')
-        print('该用户邮箱'+ assert1 )
+        print('该用户邮箱',assert1 )
         print('--------------')
       #  driver.quit()
     except:
@@ -199,16 +199,21 @@ class Untitled(unittest.TestCase):
     try: #检查银行卡
         assert4 = driver.find_element_by_xpath('//a[4]').text
         print('----------------------------------')
-        print('该用户银行卡' + assert4)
+        print('该用户银行卡',assert4)
         print('----------------------------------')
-        driver.get('https://testv2.pandai.cn/users/50131/bank_accounts')
-        time.sleep(1)
-        bank = driver.find_element_by_css_selector('h2').text
-        banknum = driver.find_element_by_css_selector("div.afba-img-cen1 > p").text
-        print('该绑卡银行为：' + bank + '|' + '卡号为：' + banknum)
-        print(bank)
+        # driver.get('https://testv2.pandai.cn/users/50131/bank_accounts')
+        if assert4 == '未绑定' :
+            driver.find_element_by_xpath('html/body/div[3]/div[1]/div[1]/p[3]/a[4]').click()
+            time.sleep(1)
+            driver.find_element_by_id('banknumber').send_keys()
+            banknum = driver.find_element_by_css_selector("div.afba-img-cen1 > p").text
+            print('该绑卡银行为：',bank,'|','卡号为：',banknum)
+
+        else:
+            pass
     except:
         print('有错误了')
+        driver.quit()
 
     # finally:
     #     driver.quit()
