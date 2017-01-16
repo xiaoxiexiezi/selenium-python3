@@ -2,13 +2,61 @@
 from selenium import webdriver
 import time
 import datetime
+import re
+import requests
 def run():
 
         # driver = webdriver.Chrome("/Users/tcw/chromedriver")
         driver = webdriver.Firefox()
-        driver.get("https://testv2.pandai.cn/registers/new")
+
+
+        urldata = driver.get("https://testv2.pandai.cn/registers/new")
         print('网站标题信息:'+ driver.title)
         driver.implicitly_wait(20)
+
+        urldata1 = driver.page_source
+        token = re.findall('<meta name="csrf-token" content="(.+?)" />', urldata1)
+        print(token)
+
+        cookies = requests.Session()
+        geturl1 = cookies.get(url1)
+        r2 = geturl1.cookies
+        r3 = '; '.join(['='.join(item) for item in r2.items()])  # 格式化cookie
+        # print(r3)
+        token = re.findall('<meta name="csrf-token" content="(.+?)" />', geturl1.text)
+        print('这是get请求后台登录后的token', token)
+
+        postdata = {
+                'authenticity_token': token,
+                'admin_account[login': 'develop_admin',
+                'admin_account[password]': 'test_123',
+                'utf8': '✓'
+        }
+        url2 = 'https://testv2.pandai.cn/admin/sessions'
+        headers = {
+                'Host': 'testv2.pandai.cn',
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Referer': 'https://testv2.pandai.cn/admin/sessions/new',
+                'Cookie': r3,
+                'Upgrade-Insecure-Requests': '1',
+                'Connection': 'keep-alive',
+                'Cache-Control':'max-age=0',
+                'If-None-Match':'W/"1d040ed4cc48f7d92d36b907f2815046"'
+
+        }
+        yzmurl = 'https://testv2.pandai.cn/home/get_captcha_text'
+        postdata2 = cookies.post(yzmurl)
+
+
+
+
+
+
+
         js="window.open('https://testv2.pandai.cn/home/get_captcha_text')"
         driver.execute_script(js)
         time.sleep(2)
@@ -89,7 +137,7 @@ def run():
         driver.quit()
 if __name__ == '__main__':
 
-        count = int(input('输入生成次数:\n'))
+        count = int(input('输入生成次数:'))
         for i in range(count):
                 run()
         print('总共注册了|' , count ,'|个用户')
