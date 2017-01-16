@@ -67,7 +67,7 @@ class Untitled(unittest.TestCase):
         print('打开了' + str(len(alltab)),'个标签')
         print('第一个标签的句柄是:',alltab[0])
         print('第二个标签的句柄是:',alltab[1])
-        a = driver.switch_to_window(alltab[1])
+        a = driver.switch_to.window(alltab[1])
         dr55 = driver.find_element_by_xpath("//pre").text
         print('本次图形验证码是:',dr55)
         # 获取图形验证码

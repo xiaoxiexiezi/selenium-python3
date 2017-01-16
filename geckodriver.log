@@ -916,3 +916,10 @@ A coding exception was thrown and uncaught in a Task.
 Full message: TypeError: NetworkError when attempting to fetch resource.
 Full stack: 
 *************************
+1484534805237	geckodriver	INFO	Listening on 127.0.0.1:53251
+1484534806247	mozprofile::profile	INFO	Using profile path /var/folders/d1/lcsdm0151md7h228hsxcf5cc0000gn/T/rust_mozprofile.UL5gnEjwQtQC
+1484534806249	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484534806271	geckodriver::marionette	INFO	Connecting to Marionette on localhost:53262
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1484534806878	Marionette	INFO	Listening on port 53262
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
