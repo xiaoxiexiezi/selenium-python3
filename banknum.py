@@ -13,7 +13,7 @@ banknum = ([
     '622538006959',
 
     # 中国银行
-    '60138201000150',
+    '601382010001504',
 
     # 中国农业银行
     '622848001827373',
@@ -37,4 +37,3 @@ banknum = ([
 from random import choice
 from _random_8_phone_ import random_str
 random_banknum = choice(banknum) + random_str(4)
-print(random_banknum)

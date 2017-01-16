@@ -15,7 +15,6 @@ def run():
 
 
         alltab = driver.window_handles
-        print('打开了' + str(len(alltab)) +'个标签')
         driver.switch_to.window(alltab[1])
         dr55 = driver.find_element_by_xpath("//pre").text
         print('本次验证码是:' + dr55)
@@ -62,9 +61,9 @@ def run():
         driver.find_element_by_xpath(u"//input[@value='查询']").click()
         time.sleep(1)
         jg = driver.find_element_by_css_selector("p.form-controls").text
-        print(jg)
+        # print(jg)
         jg6 = jg[-6:]
-        print(jg6)
+        print('手机验证码为：',jg6)
 
         driver.close()
 

@@ -164,17 +164,27 @@ class Untitled(unittest.TestCase):
         print('----------------------------------')
         # driver.get('https://testv2.pandai.cn/users/50131/bank_accounts')
         if assert4 == '未绑定' :
-            driver.find_element_by_xpath('html/body/div[3]/div[1]/div[1]/p[3]/a[4]').click()
-            time.sleep(1)
-            from banknum import random_banknum
-            banknum = random_banknum
-            driver.find_element_by_id('banknumber').clear()
-            driver.find_element_by_id('banknumber').send_keys(random_banknum)
-            # banknum1 = driver.find_element_by_css_selector("div.afba-img-cen1 > p").text
-            print('该绑卡银行为：',banknum,'|','卡号为：',banknum)
-
+            try:
+                driver.find_element_by_xpath('html/body/div[3]/div[1]/div[1]/p[3]/a[4]').click()
+                time.sleep(1)
+                from banknum import random_banknum
+                banknum = random_banknum
+                driver.find_element_by_id('banknumber').clear()
+                driver.find_element_by_id('banknumber').send_keys(random_banknum)
+                # banknum1 = driver.find_element_by_css_selector("div.afba-img-cen1 > p").text
+                driver.find_element_by_xpath('//p[6]/input').click()
+                driver.find_element_by_id('passWord').send_keys('123456')
+                driver.find_element_by_id('btn').click()
+                driver.find_element_by_id('verifyCode').send_keys('1234')
+                driver.find_element_by_id('btn2').click()
+                driver.find_element_by_link_text(u'返回').click()
+                driver.quit()
+                print('该绑卡银行为：',banknum,'|','卡号为：',banknum)
+            except:
+                driver.quit()
+                print('绑卡过程中出错，检查联动')
         else:
-            pass
+            driver.quit()
     except:
         print('有错误了')
         driver.quit()
