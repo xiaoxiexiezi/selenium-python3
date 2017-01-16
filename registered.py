@@ -88,10 +88,12 @@ def run():
 
         time.sleep(5)
         driver.quit()
-count = int(input('输入生成次数:'))
-for i in range(count):
-        run()
-print('总共注册了|' , count ,'|个用户')
+if __name__ == '__main__':
+
+        count = int(input('输入生成次数:\n'))
+        for i in range(count):
+                run()
+        print('总共注册了|' , count ,'|个用户')
 
 
 
