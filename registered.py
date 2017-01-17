@@ -2,8 +2,7 @@
 from selenium import webdriver
 import time
 import datetime
-import re
-import requests
+from zdhqyzm import Simulated_Login
 def run():
 
         # driver = webdriver.Chrome("/Users/tcw/chromedriver")
@@ -70,14 +69,14 @@ def run():
         alltab = driver.window_handles
         driver.switch_to.window(alltab[1])
         dr55 = driver.find_element_by_xpath("//pre").text
-        print('本次验证码是:' + dr55)
+        print('本次图形验证码是:' + dr55)
 
         driver.switch_to.window(alltab[1])
         driver.close()
         driver.switch_to.window(alltab[0])
 
-        from _random_phone_ import randomphone
-        u1 = randomphone()
+        import main
+        main.set_value()
 
         driver.find_element_by_id("username").clear()
         driver.find_element_by_id("username").send_keys(u1) #从_random_phone_ import u读取随机生成的手机号去注册
@@ -85,43 +84,42 @@ def run():
         driver.find_element_by_id("verification").send_keys(dr55)
         driver.find_element_by_id("submit").click()
         time.sleep(1)
+        jg6 = Simulated_Login()
 
-        js2="window.open('https://testv2.pandai.cn/admin/portal/query_captcha')"
-        driver.execute_script(js2)
-        time.sleep(5)
-        alltab3 = driver.window_handles
-        # print('打开了' + str(len(alltab)) +'个标签')
-        # print('第一个标签的句柄是:' + alltab3[0])
-        # print('第二个标签的句柄是:' + alltab3[1])
-        driver.switch_to_window(alltab3[1])
 
-        time.sleep(2)
+        #获取短信验证码
+        # js2="window.open('https://testv2.pandai.cn/admin/portal/query_captcha')"
+        # driver.execute_script(js2)
+        # time.sleep(5)
+        # alltab3 = driver.window_handles
+        # # print('打开了' + str(len(alltab)) +'个标签')
+        # # print('第一个标签的句柄是:' + alltab3[0])
+        # # print('第二个标签的句柄是:' + alltab3[1])
+        # driver.switch_to.window(alltab3[1])
+        # time.sleep(2)
+        # driver.find_element_by_id("login").clear()
+        # driver.find_element_by_id("login").send_keys("develop_admin")
+        # driver.find_element_by_id("password").clear()
+        # driver.find_element_by_id("password").send_keys("test_123")
+        # driver.find_element_by_xpath("//button[@type='submit']").click()
+        # time.sleep(1)
+        # driver.get('https://testv2.pandai.cn/admin/portal/query_captcha')
+        # driver.switch_to.window(alltab3[1])
+        # time.sleep(1)
+        # driver.find_element_by_name("mobile").send_keys(u1)
+        # driver.find_element_by_xpath(u"//input[@value='查询']").click()
+        # time.sleep(1)
+        # jg = driver.find_element_by_css_selector("p.form-controls").text
+        # # print(jg)
+        # jg6 = jg[-6:]
+        # print('手机验证码为：',jg6)
+        # driver.close()
 
-        driver.find_element_by_id("login").clear()
-        driver.find_element_by_id("login").send_keys("develop_admin")
 
-        driver.find_element_by_id("password").clear()
-        driver.find_element_by_id("password").send_keys("test_123")
+        # driver.switch_to_window(alltab3[0])
 
-        driver.find_element_by_xpath("//button[@type='submit']").click()
-        time.sleep(1)
-        driver.get('https://testv2.pandai.cn/admin/portal/query_captcha')
-        driver.switch_to_window(alltab3[1])
-        #print(alltab3[1])
-        time.sleep(1)
-
-        driver.find_element_by_name("mobile").send_keys(u1)
-        driver.find_element_by_xpath(u"//input[@value='查询']").click()
-        time.sleep(1)
-        jg = driver.find_element_by_css_selector("p.form-controls").text
-        # print(jg)
-        jg6 = jg[-6:]
-        print('手机验证码为：',jg6)
-
-        driver.close()
-
-        driver.switch_to_window(alltab3[0])
         driver.find_element_by_id("phoneverification").clear()
+
         driver.find_element_by_id("phoneverification").send_keys(jg6)
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys("test123")
