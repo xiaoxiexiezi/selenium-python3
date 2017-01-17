@@ -1,26 +1,64 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import time
-from _random_amount_ import *
-driver = webdriver.Chrome('/Users/tcw/chromedriver')
-driver.get("https://testv2.pandai.cn")
-time.sleep(2)
-oldtab = driver.current_window_handle
-print(oldtab)
-driver.find_element_by_link_text(u"理财").click()
-driver.find_element_by_link_text(u"土猪猪猪一").click()
-alltab = driver.window_handles #获得标签句柄
-driver.switch_to_window(alltab[1]) #焦点第二个标签[1]
-title = driver.title
-print(title)
-time.sleep(3)
-tz2 = driver.find_element_by_css_selector("div.rec-2").text
-time.sleep(3)
-print(tz2)
-if tz1 == tz2:
-	print('页面存在,测试通过')
-driver.find_element_by_xpath("//a[2]").click() #还款列表
-driver.find_element_by_xpath("//a[3]").click() #投资记录
-time.sleep(5)
-print(tz2)
-driver.quit()
+import requests
+import re
+url = 'https://testv2.pandai.cn/admin'
+
+def Simulated_Login():
+
+		'''模拟登录后台'''
+
+		cookies = requests.Session()
+		headers2 = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0'}
+		url1 = 'https://testv2.pandai.cn/admin/'
+		geturl1 = cookies.get(url1,headers=headers2)
+		r2 = geturl1.cookies
+		r3 = '; '.join(['='.join(item) for item in r2.items()]) #格式化cookie
+		# print(r3)
+		token = re.findall('<meta name="csrf-token" content="(.+?)" />', geturl1.text)
+		# print('这是get请求后台登录后的token',token)
+
+		#拿到token后写入postdata里，下方post请求登录时需要传入第一个打开url的token
+		postdata = {
+			'authenticity_token':token,
+			'admin_account[login':'develop_admin',
+			'admin_account[password]':'test_123',
+			'utf8':'✓'
+		}
+		url2 = 'https://testv2.pandai.cn/admin/sessions'
+		headers = {
+			'Host':'testv2.pandai.cn',
+			'Content-Type': 'application/x-www-form-urlencoded',
+			'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0',
+			'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+			'Accept-Language':'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+			'Accept-Encoding':'gzip, deflate, br',
+			'Referer':'https://testv2.pandai.cn/admin/sessions/new',
+			'Cookie': r3,
+			'Upgrade-Insecure-Requests':'1',
+			'Connection':'keep-alive',
+
+				}
+		posturl2 = cookies.post(url2,data=postdata,headers=headers) #登录后台
+		# print(posturl2.text)
+
+		status_code = posturl2.status_code
+		if status_code == 200 :
+			print('登录成功')
+		else:
+			print('登录失败')
+
+		#获取短信验证码
+		yzmurl = 'https://testv2.pandai.cn/admin/portal/query_captcha'
+		mobile = {'mobile':'18611173991'}
+		dxyzm = cookies.get(yzmurl,params=mobile)
+		dxyzm7 = dxyzm.text
+		dxyzm8 = dxyzm7
+		p = re.compile(r'\d+')
+		token = p.findall(dxyzm8)
+		bcdxyzm = token[-9]
+		print(bcdxyzm)
+		return bcdxyzm,status_code
+
+
+Simulated_Login()
+
+

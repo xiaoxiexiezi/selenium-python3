@@ -16,25 +16,46 @@ def run():
         cookie = driver.get_cookies()
         print(cookie)
         print(99999999999)
+
+        #获取浏览器里cookies，并打印成一个列表
         list = []
         for cookie in driver.get_cookies():
             list.append(cookie['value'])
             print('第一条',cookie['value'])
         print(list)
-        afdf = list[0]
+        afdf = list[0]#获取该列表里第一个字符串
         print(afdf)
+
         print(666666666)
 
+        url1 = 'https://testv2.pandai.cn/home/get_captcha_text'
 
+        paylod = list[0]
+        print(paylod)
+        print(44444444444444)
+        # driver.delete_all_cookies()
+        # driver.add_cookie({'name':'_p2plending_v2_session','value': paylod,'httpOnly':True,'domain':'testv2.pandai.cn','path':'/'})
+        # pay123 = driver.get_cookies()
+        # print(pay123)
+        print(9999999999999)
 
+        headers = {
+            'Host': 'testv2.pandai.cn',
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Referer': 'https://testv2.pandai.cn/admin/sessions/new',
+            'Cookie': paylod,
+            'Upgrade-Insecure-Requests': '1',
+            'Connection': 'keep-alive',
 
+        }
+        tt = requests.get(url1,cookies=cookie)
+        print(tt)
 
-
-
-
-
-
-
+        time.sleep(4343434)
 
 
         # url1 = 'https://testv2.pandai.cn/rucaptcha/'
@@ -42,7 +63,7 @@ def run():
         cookies = requests.Session()
         print(cookies)
         # time.sleep(22222)
-        geturl1 = cookies.get(url1)
+        # geturl1 = cookies.get(url1)
         print(geturl1,1213123123)
         # time.sleep(22222)
         r2 = geturl1.cookies
