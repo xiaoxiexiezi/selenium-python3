@@ -3,11 +3,11 @@ import datetime
 import random
 
 from mypackage._random_8_phone_ import random_str
-
-now = datetime.datetime.now()
 u = ''
+now = datetime.datetime.now()
 def randomphone():
     f = random.choice((130, 131, 133, 134, 135, 136, 138, 139, 150, 151, 173, 180, 181, 182, 183, 185, 186, 187, 189,))
+    global u
     u = str(f) + str(random_str(8))
     print('本次随机的手机号为|' + u + '|' + str(now) + '\n')
 
@@ -17,6 +17,5 @@ def randomphone():
     phonefile.write('本次随机到手机号为|' + u  + '|' + str(now)   + '\n')
 
     return u
-
-if __name__ == '__main__':
-    randomphone()
+randomphone()
+fdf = u
