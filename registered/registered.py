@@ -136,10 +136,8 @@ def run():
         print('验证码长度不正确，请检查')
         driver.quit()
     driver.quit()
+    print('-----注册完成了-----')
 
-    now = datetime.datetime.now()
-    phonefile = open("/Users/tcw/Random number.txt", 'a',encoding='utf8')
-    phonefile.write('本次随机到手机号为|' + u23  + '|' + str(now)   + '\n')
 if __name__ == '__main__':
 
         count = int(input('输入生成次数:'))
