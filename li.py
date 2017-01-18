@@ -1,3 +1,5 @@
-def fdf(x,y):
-    x=x+y
-    return x,y
+#coding:utf-8
+import os
+file = '/Users/tcw/already_registered.txt',
+with open(file,'rb') as f:
+    lines = f.readlines()
