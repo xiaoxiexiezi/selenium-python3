@@ -1,7 +1,9 @@
 #coding=utf-8
-import random
 import datetime
-from _random_8_phone_ import random_str
+import random
+
+from mypackage._random_8_phone_ import random_str
+
 now = datetime.datetime.now()
 def randomphone():
     f = random.choice((130, 131, 133, 134, 135, 136, 138, 139, 150, 151, 173, 180, 181, 182, 183, 185, 186, 187, 189,))

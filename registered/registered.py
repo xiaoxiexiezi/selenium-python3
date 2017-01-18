@@ -1,9 +1,10 @@
 #coding=utf-8
-from selenium import webdriver
-import time
-import re
-import requests
 import datetime
+import time
+
+from selenium import webdriver
+
+
 def run():
 
         # driver = webdriver.Chrome("/Users/tcw/chromedriver")
@@ -23,7 +24,7 @@ def run():
         driver.switch_to.window(alltab[0])
 
 
-        from _random_phone_ import randomphone
+        from mypackage._random_phone_ import randomphone
         u23 = randomphone()
         driver.find_element_by_id("username").clear()
         driver.find_element_by_id("username").send_keys(u23) #从_random_phone_ import u读取随机生成的手机号去注册
@@ -31,8 +32,7 @@ def run():
         driver.find_element_by_id("verification").send_keys(dr55)
         driver.find_element_by_id("submit").click()
         time.sleep(1)
-
-        from zdhqyzm import Simulated_Login
+        from mypackage._zdhqyzm_ import  Simulated_Login
         yzm = Simulated_Login()
         if yzm != '验证码长度不正确，请检查':
 
@@ -43,7 +43,7 @@ def run():
             driver.find_element_by_id("password").send_keys("test123")
             driver.find_element_by_id("password2").clear()
             driver.find_element_by_id("password2").send_keys("test123")
-            time.sleep(1.5)
+            time.sleep(0.5)
             driver.find_element_by_xpath("//div[2]/form/p[5]/input").click()
             now = datetime.datetime.now()
             phonefile = open("/Users/tcw/already_registered.txt", 'a',encoding='utf-8')

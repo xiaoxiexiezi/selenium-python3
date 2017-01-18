@@ -1,5 +1,3 @@
-
-from zhuce import *
 # def fdfdf():
 #     return 456
 # print(fdfdf())
@@ -7,5 +5,5 @@ from zhuce import *
 # from li import *
 # print(fdf(5,44))
 
-from zdhqyzm import *
+from mypackage._zdhqyzm_ import *
 print(Simulated_Login())

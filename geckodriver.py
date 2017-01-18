@@ -1,10 +1,9 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import time
-import re
-from _random_amount_ import qu
-from _getuser_ import count2
-from selenium.webdriver.common.action_chains import ActionChains
+
+from selenium import webdriver
+
+from mypackage._getuser_ import count2
+
 driver = webdriver.Firefox()
 driver.implicitly_wait(30)
 driver.get("https://testv2.pandai.cn")

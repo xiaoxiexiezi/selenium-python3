@@ -1,12 +1,7 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import time
-import re
-from _random_amount_ import qu
-from _getuser_ import count2
-from selenium.webdriver.common.action_chains import ActionChains
-
 from Robot import *
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome('/Users/tcw/chromedriver')
 

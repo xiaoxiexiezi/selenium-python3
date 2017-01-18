@@ -1,9 +1,10 @@
 #coding=utf-8
-import unittest
-from selenium import webdriver
 import time
-from _random_phone_ import u
-import datetime
+import unittest
+
+from selenium import webdriver
+
+
 class Untitled(unittest.TestCase):
 
         driver = webdriver.Chrome("/Users/tcw/chromedriver")

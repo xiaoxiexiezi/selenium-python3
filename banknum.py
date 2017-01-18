@@ -35,5 +35,7 @@ banknum = ([
     ])
 #随机获取银行卡号
 from random import choice
-from _random_8_phone_ import random_str
+
+from mypackage._random_8_phone_ import random_str
+
 random_banknum = choice(banknum) + random_str(4)

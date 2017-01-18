@@ -1,12 +1,12 @@
 #coding=utf-8
-from selenium import webdriver
 import time
-from _getuser_ import count2
-import re
 import unittest
-from selenium.webdriver.support.ui import WebDriverWait
+
+from _getuser_ import count2
+from selenium import webdriver
+
+
 # import selenium.webdriver.JavascriptExecutor
-from selenium.webdriver.support import expected_conditions as EC
 
 class Untitled(unittest.TestCase):
     # driver = webdriver.Chrome("/Users/tcw/chromedriver")
@@ -46,12 +46,12 @@ class Untitled(unittest.TestCase):
 
     if assert2 == '未认证':
         driver.find_element_by_link_text(u"未认证").click()
-        from _randomchinese_ import andstr
+        from mypackage._randomchinese_ import andstr
         time.sleep(2)
         driver.find_element_by_css_selector("p.afac-popup-cen2>span.two-step").click()
         time.sleep(2)
         driver.find_element_by_id("realname").send_keys(andstr) #填写姓名
-        from _defins_ import getdata
+        from mypackage._defins_ import getdata
         driver.find_element_by_id("idnumber").clear()
         driver.find_element_by_id("idnumber").send_keys(getdata()) #填写身份证号
         idmobile = driver.find_element_by_id('idmobile').text

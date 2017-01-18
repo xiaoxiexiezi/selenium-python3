@@ -1,10 +1,8 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import time
 import re
-from _random_amount_ import qu
-from _getuser_ import count2
-from selenium.webdriver.common.action_chains import ActionChains
+import time
+
+from selenium import webdriver
+
 driver = webdriver.Chrome('/Users/tcw/chromedriver')
 
 driver.get("https://testv2.pandai.cn")
@@ -58,7 +56,6 @@ driver.find_element_by_name("commit").click()
 driver.find_element_by_link_text(u"理财").click()
 # driver.find_element_by_link_text(u"土猪猪猪一").click()
 driver.find_element_by_css_selector("p.product-bidding-name > a").click()
-from selenium.webdriver.support.ui import Select
 # Select(driver.find_element_by_id("select")).select_by_visible_text(u"20元,投资500元可用")
 tabs = driver.window_handles
 print('打开了',len(tabs),'个标签')

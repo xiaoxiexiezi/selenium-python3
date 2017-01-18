@@ -1,8 +1,8 @@
 #利用生成的4位随机中文保存到chinesefile.txt中
 
-from _randomchinese_ import andstr
-
 import datetime
+
+from mypackage._randomchinese_ import andstr
 now = datetime.datetime.now()
 
 
