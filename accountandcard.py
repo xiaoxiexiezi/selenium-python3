@@ -1,12 +1,8 @@
 #coding=utf-8
 import time
 import unittest
-
-from _getuser_ import count2
+from mypackage._getuser_ import count2
 from selenium import webdriver
-
-
-# import selenium.webdriver.JavascriptExecutor
 
 class Untitled(unittest.TestCase):
     # driver = webdriver.Chrome("/Users/tcw/chromedriver")
@@ -18,8 +14,8 @@ class Untitled(unittest.TestCase):
     driver.find_element_by_id("login").clear()
     driver.find_element_by_id("login").send_keys(count2)
     time.sleep(1)
-    a = count2
-    print(a)
+    # a = count2
+    # print(a)
     phonefile1 = "/Users/tcw/already_registered.txt"
     count3 = len(open(phonefile1,'rU',encoding='utf-8').readlines()) #获取文件总行数
     print('总行数1:' + str(count3))
@@ -99,40 +95,43 @@ class Untitled(unittest.TestCase):
         except:
             print(444)
             driver.quit()
-        time.sleep(2)
+        # time.sleep(2)
 
 
-        #***********打开第二个浏览器获取短信验证码****************
-        driver2 = webdriver.Chrome("/Users/tcw/chromedriver")
-        driver2.get("https://testv2.pandai.cn/admin/portal/query_captcha")
-        print('这是打开的第二个浏览器')
-        #获取短信验证码
-        time.sleep(1)
-        driver2.find_element_by_id("login").clear()
-        driver2.find_element_by_id("login").send_keys("develop_admin")
-        driver2.find_element_by_id("password").clear()
-        driver2.find_element_by_id("password").send_keys("test_123")
-        driver2.find_element_by_xpath("//button[@type='submit']").click()
-        time.sleep(1)
-        driver2.get('https://testv2.pandai.cn/admin/portal/query_captcha')
+        # #***********打开第二个浏览器获取短信验证码****************
+        # driver2 = webdriver.Chrome("/Users/tcw/chromedriver")
+        # driver2.get("https://testv2.pandai.cn/admin/portal/query_captcha")
+        # print('这是打开的第二个浏览器')
+        # #获取短信验证码
+        # time.sleep(1)
+        # driver2.find_element_by_id("login").clear()
+        # driver2.find_element_by_id("login").send_keys("develop_admin")
+        # driver2.find_element_by_id("password").clear()
+        # driver2.find_element_by_id("password").send_keys("test_123")
+        # driver2.find_element_by_xpath("//button[@type='submit']").click()
+        # time.sleep(1)
+        # driver2.get('https://testv2.pandai.cn/admin/portal/query_captcha')
+        #
+        # time.sleep(1)
+        # driver2.find_element_by_name("mobile").send_keys(count2)
+        # time.sleep(5)
+        # driver2.find_element_by_xpath(u"//input[@value='查询']").click()
+        # time.sleep(1)
+        # jg = driver2.find_element_by_css_selector("p.form-controls").text
+        # print(jg)
+        # jg6 = jg[-6:]
+        # print(jg6)
+        # # 获取短信验证码
+        # time.sleep(2)
+        # driver2.quit()
+        #
+        # time.sleep(2)
+        # driver.switch_to_window(alltab[0])
+        from mypackage._zdhqyzm_ import Simulated_Login
+        dxyzm = Simulated_Login()
 
-        time.sleep(1)
-        driver2.find_element_by_name("mobile").send_keys(count2)
-        time.sleep(5)
-        driver2.find_element_by_xpath(u"//input[@value='查询']").click()
-        time.sleep(1)
-        jg = driver2.find_element_by_css_selector("p.form-controls").text
-        print(jg)
-        jg6 = jg[-6:]
-        print(jg6)
-        # 获取短信验证码
-        time.sleep(2)
-        driver2.quit()
 
-        time.sleep(2)
-        driver.switch_to_window(alltab[0])
-
-        driver.find_element_by_id('idcode').send_keys(jg6)
+        driver.find_element_by_id('idcode').send_keys(dxyzm)
         time.sleep(1)
         driver.find_element_by_id('submission').click()
 
@@ -189,10 +188,6 @@ class Untitled(unittest.TestCase):
         print('有错误了')
         driver.quit()
 
-    # finally:
-    #     driver.quit()
-
-   # driver.quit()
 
 if __name__ == "__main__":
     unittest.main()
