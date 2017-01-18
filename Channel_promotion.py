@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui  import Select
 def htdl():
     driver = webdriver.Firefox()
     driver.get("https://testv2.pandai.cn/admin")
-    driver.implicitly_wait(20)
+    driver.implicitly_wait(11)
     driver.find_element_by_id('login').send_keys('develop_admin')
     driver.find_element_by_id('password').send_keys('test_123')
     driver.find_element_by_xpath('//button').click()
@@ -32,8 +32,9 @@ def htdl():
     driver.find_element_by_id('password').send_keys('test123')
     driver.find_element_by_id('admin_account_confirm_password').send_keys('test123')
     driver.find_element_by_name('commit').click()
-    time.sleep(3)
-    driver.find_element_by_xpath('//input').send_keys(user)
+    # driver.find_element_by_link_text(u'市场').click()
+    # #寻找input属性以placeholder开头的a元素。其中@后面的''里的内容可以替换成元素的任意其他属性。
+    # driver.find_element_by_xpath("//input[starts-with(@placeholder,'')]").send_keys('sc18354723075')
 
 
 
