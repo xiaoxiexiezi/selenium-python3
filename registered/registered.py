@@ -45,14 +45,21 @@ def run():
             driver.find_element_by_id("password2").send_keys("test123")
             time.sleep(0.5)
             driver.find_element_by_xpath("//div[2]/form/p[5]/input").click()
-            now = datetime.datetime.now()
-            phonefile = open("/Users/tcw/already_registered.txt", 'a',encoding='utf-8')
-            phonefile.write('本次注册使用手机号为：' + u23 + '|' + str(now) + '\n' )
-            phonefile.close()
-            phonefile1 = "/Users/tcw/already_registered.txt"
-            count2 = len(open(phonefile1,'rU',encoding='utf-8').readlines()) #获取文件总行数
-            print('总行数:' + str(count2))
-            phonefile.close()
+            time.sleep(2)
+            zhzjz = driver.find_element_by_xpath("//p[4]").text
+            print(zhzjz)
+            time.sleep(3)
+            if zhzjz == '登录盼贷旧版网站查看详情':
+                now = datetime.datetime.now()
+                phonefile = open("/Users/tcw/already_registered.txt", 'a',encoding='utf-8')
+                phonefile.write('本次注册使用手机号为：' + u23 + '|' + str(now) + '\n' )
+                phonefile.close()
+                phonefile1 = "/Users/tcw/already_registered.txt"
+                count2 = len(open(phonefile1,'rU',encoding='utf-8').readlines()) #获取文件总行数
+                print('总行数:' + str(count2))
+                phonefile.close()
+            else:
+                print('注册并不成功')
         else:
             print('验证码长度不正确，请检查')
             driver.quit()

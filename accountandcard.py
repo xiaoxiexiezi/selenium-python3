@@ -1,8 +1,11 @@
 #coding=utf-8
 import time
 import unittest
-from mypackage._getuser_ import count2
+
 from selenium import webdriver
+
+from mypackage._getuser_ import count2
+
 
 class Untitled(unittest.TestCase):
     # driver = webdriver.Chrome("/Users/tcw/chromedriver")
@@ -53,12 +56,12 @@ class Untitled(unittest.TestCase):
         idmobile = driver.find_element_by_id('idmobile').text
 
         driver.find_element_by_id("captcha-button").click()
+        time.sleep(1.5)
 
         #获取图形验证码
         js = "window.open('https://testv2.pandai.cn/home/get_captcha_text')"
         driver.execute_script(js)
         time.sleep(1)
-
         alltab = driver.window_handles
         print('打开了' + str(len(alltab)),'个标签')
         print('第一个标签的句柄是:',alltab[0])
@@ -84,11 +87,11 @@ class Untitled(unittest.TestCase):
                 print('a2')
             else:
                 driver.find_element_by_xpath("//fieldset/input").send_keys(dr55)
-                time.sleep(3)
+                time.sleep(2)
                 driver.find_element_by_css_selector('button.confirm').click()
                 time.sleep(1)
                 driver.find_element_by_css_selector('button.confirm').click()
-
+                time.sleep(1.5)
                 driver.find_element_by_xpath('//div[7]/button[2]').click()
                 print('else')
             print(123)
@@ -130,10 +133,11 @@ class Untitled(unittest.TestCase):
         from mypackage._zdhqyzm_ import Simulated_Login
         dxyzm = Simulated_Login()
 
-
+        time.sleep(2)
         driver.find_element_by_id('idcode').send_keys(dxyzm)
         time.sleep(1)
         driver.find_element_by_id('submission').click()
+        time.sleep(1)
 
 
     print('*************************')
@@ -166,21 +170,29 @@ class Untitled(unittest.TestCase):
             try:
                 driver.find_element_by_xpath('html/body/div[3]/div[1]/div[1]/p[3]/a[4]').click()
                 time.sleep(1)
-                from banknum import random_banknum
+                from mypackage.banknum import random_banknum
                 banknum = random_banknum
                 driver.find_element_by_id('banknumber').clear()
-                driver.find_element_by_id('banknumber').send_keys(random_banknum)
+                driver.find_element_by_id('banknumber').send_keys(banknum)
+                time.sleep(2)
                 # banknum1 = driver.find_element_by_css_selector("div.afba-img-cen1 > p").text
                 driver.find_element_by_xpath('//p[6]/input').click()
                 driver.find_element_by_id('passWord').send_keys('123456')
+                khh = driver.find_element_by_xpath('//li[4]/div[2]').text
+                print(khh)
+                time.sleep(333)
                 driver.find_element_by_id('btn').click()
                 driver.find_element_by_id('verifyCode').send_keys('1234')
                 driver.find_element_by_id('btn2').click()
-                driver.find_element_by_link_text(u'返回').click()
-                driver.quit()
-                print('该绑卡银行为：',banknum,'|','卡号为：',banknum)
+                fanhui = driver.find_element_by_link_text(u'返回').text
+                if fanhui == '返回':
+                    driver.find_element_by_link_text(u'返回').click()
+                    driver.quit()
+                    print('该绑卡银行为：',banknum,'|','卡号为：',banknum)
+                else:
+                    pass
             except:
-                driver.quit()
+                # driver.quit()
                 print('绑卡过程中出错，检查联动')
         else:
             driver.quit()
