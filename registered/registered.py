@@ -27,7 +27,6 @@ def run():
 
     from mypackage._random_phone_ import randomphone
     u23 = randomphone()
-    print(randomphone())
     driver.find_element_by_id("username").clear()
     driver.find_element_by_id("username").send_keys(u23) #从_random_phone_ import u读取随机生成的手机号去注册
     driver.find_element_by_id("verification").clear()
@@ -137,6 +136,10 @@ def run():
         print('验证码长度不正确，请检查')
         driver.quit()
     driver.quit()
+
+    now = datetime.datetime.now()
+    phonefile = open("/Users/tcw/Random number.txt", 'a',encoding='utf8')
+    phonefile.write('本次随机到手机号为|' + u23  + '|' + str(now)   + '\n')
 if __name__ == '__main__':
 
         count = int(input('输入生成次数:'))
